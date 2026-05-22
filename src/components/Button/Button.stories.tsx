@@ -1,10 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
+import SaveIcon from '@mui/icons-material/Save';
 
 import { fn } from 'storybook/test';
 
 import { Button } from './Button';
+import { Stack } from '@mui/material';
 
 const meta = {
 	title: 'Button',
@@ -58,6 +60,7 @@ const meta = {
 			}
 		},
 		children: { table: { disable: true } },
+		onClick: { table: { disable: true } },
 	},
 	args: {
 		onClick: fn(),
@@ -70,16 +73,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Controls: Story = {
-	argTypes: {
-		onClick: { table: { disable: true } },
-	},
-}
+export const Controls: Story = {}
 
 export const BasicButtons: Story = {
 	argTypes: {
 		variant: { table: { disable: true } },
-		onClick: { table: { disable: true } },
 	},
 	render: ({ ...args }) => (
 		<div className="storybook-container">
@@ -91,14 +89,82 @@ export const BasicButtons: Story = {
 };
 
 export const ButtonsWithIcons: Story = {
+	render: ({ ...args }) => (
+		<div className="storybook-container">
+			<Button variant="outlined" { ...args } startIcon={<DeleteIcon />}>Delete</Button>
+			<Button variant="outlined" { ...args } endIcon={<SendIcon />}>Send</Button>
+		</div>
+	),
+};
+
+export const Loading: Story = {
 	argTypes: {
-		variant: { table: { disable: true } },
-		onClick: { table: { disable: true } },
+		loading: {
+			control: 'boolean',
+		},
+		disabled: { table: { disable: true } },
+		fullWidth: { table: { disable: true } },
+	},
+	args: {
+		loading: true
 	},
 	render: ({ ...args }) => (
 		<div className="storybook-container">
-			<Button { ...args } variant="outlined" startIcon={<DeleteIcon />}>Delete</Button>
-			<Button { ...args } variant="contained" endIcon={<SendIcon />}>Send</Button>
+			<Stack spacing={2}>
+				<Stack direction="row" spacing={2}>
+					<Button
+						variant="outlined"
+						{ ...args }
+					>Submit</Button>
+					<Button
+						variant="outlined"
+						{ ...args }
+						loadingIndicator="Loading..."
+					>Submit</Button>
+					<Button
+						variant="outlined"
+						{ ...args }
+						loadingPosition="start"
+						startIcon={<SaveIcon />}
+					>
+						Save
+					</Button>
+				</Stack>
+				<Button
+					variant="outlined"
+					{ ...args }
+					fullWidth
+					loadingPosition="start"
+					startIcon={<SaveIcon />}
+				>
+					Full width
+				</Button>
+				<Button
+					variant="outlined"
+					{ ...args }
+					fullWidth
+					loadingPosition="end"
+					endIcon={<SaveIcon />}
+				>
+					Full width
+				</Button>
+				<Stack direction="row" spacing={2}>
+					<Button variant="outlined" { ...args } loadingPosition="start">
+						Submit
+					</Button>
+					<Button variant="outlined" { ...args } loadingPosition="end">
+						Submit
+					</Button>
+					<Button
+						variant="outlined"
+						{ ...args }
+						loadingPosition="end"
+						startIcon={<SaveIcon />}
+					>
+						Save
+					</Button>
+				</Stack>
+			</Stack>
 		</div>
 	),
 };
