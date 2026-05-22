@@ -9,7 +9,7 @@ import { Button } from './Button';
 import { Stack } from '@mui/material';
 
 const meta = {
-	title: 'Button',
+	title: 'Stories/Button',
 	component: Button,
 	parameters: {
 		layout: 'centered',
