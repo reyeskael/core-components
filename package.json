@@ -9,6 +9,7 @@
 	"dependencies": {
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.1",
+		"@mui/icons-material": "^9.0.1",
 		"@mui/material": "^9.0.1",
 		"react": "^19.2.6",
 		"react-dom": "^19.2.6",
@@ -29,6 +30,19 @@
 			"react-app",
 			"react-app/jest",
 			"plugin:storybook/recommended"
+		],
+		"overrides": [
+			{
+				"files": [
+					"*.stories.@(ts|tsx)"
+				],
+				"parser": "@typescript-eslint/parser",
+				"parserOptions": {
+					"ecmaFeatures": {
+						"jsx": true
+					}
+				}
+			}
 		]
 	},
 	"browserslist": {
