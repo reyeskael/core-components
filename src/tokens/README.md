@@ -34,26 +34,26 @@ We follow two industry standards:
 ## Architecture at a glance
 
 ```
- ┌─────────────────────────────────────────────┐
+ ┌───────────────────────────────────────────────┐
  │  AUTHORED (you edit these)                    │
  │                                               │
  │  primitive/   →   semantic/   →   component/  │   DTCG JSON
- │  raw values       meaning         per-widget   │   ($value/$type)
+ │  raw values       meaning         per-widget  │   ($value/$type)
  └───────────────────────┬───────────────────────┘
                          │  yarn build:tokens
                          ▼
- ┌─────────────────────────────────────────────┐
+ ┌───────────────────────────────────────────────┐
  │  scripts/build-tokens.mjs (Style Dictionary)  │   resolves {references},
  │                                               │   emits a typed object
  └───────────────────────┬───────────────────────┘
                          ▼
- ┌─────────────────────────────────────────────┐
+ ┌───────────────────────────────────────────────┐
  │  generated/tokens.ts  (committed, do NOT edit)│
  └───────────────────────┬───────────────────────┘
                          ▼
- ┌─────────────────────────────────────────────┐
- │  src/theme/styleCreator.ts → MUI createTheme   │
- └─────────────────────────────────────────────┘
+ ┌───────────────────────────────────────────────┐
+ │  src/theme/styleCreator.ts → MUI createTheme  │
+ └───────────────────────────────────────────────┘
 ```
 
 Directory layout:
