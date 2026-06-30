@@ -1,0 +1,43 @@
+{
+	"chip": {
+		"color": {
+			"default": {
+				"background": { "$type": "color", "$value": "#E0E0E0" },
+				"text": { "$type": "color", "$value": "#000000" },
+				"border": { "$type": "color", "$value": "#BDBDBD" },
+				"deleteIcon": { "$type": "color", "$value": "#757575" }
+			},
+			"primary": {
+				"background": { "$type": "color", "$value": "#128C7E" },
+				"text": { "$type": "color", "$value": "#FFFFFF" },
+				"border": { "$type": "color", "$value": "#128C7E" },
+				"deleteIcon": { "$type": "color", "$value": "#FFFFFF" }
+			},
+			"secondary": {
+				"background": { "$type": "color", "$value": "#FFD600" },
+				"text": { "$type": "color", "$value": "#000000" },
+				"border": { "$type": "color", "$value": "#FFD600" },
+				"deleteIcon": { "$type": "color", "$value": "#000000" }
+			},
+			"error": {
+				"background": { "$type": "color", "$value": "#D32F2F" },
+				"text": { "$type": "color", "$value": "#FFFFFF" },
+				"border": { "$type": "color", "$value": "#D32F2F" },
+				"deleteIcon": { "$type": "color", "$value": "#FFFFFF" }
+			}
+		},
+		"size": {
+			"small": {
+				"height": { "$type": "dimension", "$value": "24px" },
+				"fontSize": { "$type": "dimension", "$value": "12px" },
+				"paddingX": { "$type": "dimension", "$value": "8px" }
+			},
+			"medium": {
+				"height": { "$type": "dimension", "$value": "32px" },
+				"fontSize": { "$type": "dimension", "$value": "14px" },
+				"paddingX": { "$type": "dimension", "$value": "12px" }
+			}
+		},
+		"borderRadius": { "$type": "dimension", "$value": "16px" }
+	}
+}

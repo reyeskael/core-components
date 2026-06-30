@@ -1,0 +1,223 @@
+## Chip Component
+
+The Chip component is a compact UI element built on top of Material-UI's Chip, used to represent tags, filters, attributes, or dismissible items in a concise and interactive form.
+
+## Overview
+
+Chips allow users to make selections, filter content, or trigger actions. They can optionally display a delete icon via the `onDelete` prop, making them ideal for input tags and filter lists.
+
+[📖 View Chip Storybook](?path=/docs/stories-chip--docs)
+
+## Props
+
+The Chip component accepts all standard Material-UI Chip props:
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>label</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>The text content displayed inside the chip (required)</td>
+		</tr>
+		<tr>
+			<td><code>variant</code></td>
+			<td>`filled` | `outlined`</td>
+			<td>`filled`</td>
+			<td>The visual style variant of the chip</td>
+		</tr>
+		<tr>
+			<td><code>color</code></td>
+			<td>`default` | `primary` | `secondary` | `error`</td>
+			<td>`default`</td>
+			<td>The color theme applied to the chip</td>
+		</tr>
+		<tr>
+			<td><code>size</code></td>
+			<td>`small` | `medium`</td>
+			<td>`medium`</td>
+			<td>The size of the chip</td>
+		</tr>
+		<tr>
+			<td><code>disabled</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the chip is disabled</td>
+		</tr>
+		<tr>
+			<td><code>onDelete</code></td>
+			<td><code>(event: any) => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the delete icon is clicked; also renders the delete icon</td>
+		</tr>
+		<tr>
+			<td><code>onClick</code></td>
+			<td><code>(event: MouseEvent) => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the chip is clicked</td>
+		</tr>
+		<tr>
+			<td><code>icon</code></td>
+			<td><code>ReactElement</code></td>
+			<td><code>undefined</code></td>
+			<td>Icon element displayed before the label</td>
+		</tr>
+		<tr>
+			<td><code>avatar</code></td>
+			<td><code>ReactElement</code></td>
+			<td><code>undefined</code></td>
+			<td>Avatar element displayed before the label</td>
+		</tr>
+		<tr>
+			<td><code>deleteIcon</code></td>
+			<td><code>ReactElement</code></td>
+			<td><code>undefined</code></td>
+			<td>Custom element used as the delete icon</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/chip/" target="_blank" rel="noopener noreferrer">Material-UI Chip documentation</a>.
+
+## Design tokens
+
+Chip styles are driven by three tiers of tokens. The primitive tier defines raw values; the semantic tier groups them into filled and outlined concepts; the component tier maps to the exact MUI variant × color shape consumed by the theme module.
+
+### Filled variant
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>chip.filled.default.background</code></td>
+			<td>Default chip background color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.default.text</code></td>
+			<td>Default chip label color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.default.deleteIcon</code></td>
+			<td>Default chip delete icon color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.primary.background</code></td>
+			<td>Primary chip background color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.primary.text</code></td>
+			<td>Primary chip label color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.primary.deleteIcon</code></td>
+			<td>Primary chip delete icon color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.secondary.background</code></td>
+			<td>Secondary chip background color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.secondary.text</code></td>
+			<td>Secondary chip label color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.error.background</code></td>
+			<td>Error chip background color</td>
+		</tr>
+		<tr>
+			<td><code>chip.filled.error.text</code></td>
+			<td>Error chip label color</td>
+		</tr>
+	</tbody>
+</table>
+
+### Outlined variant
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>chip.outlined.default.border</code></td>
+			<td>Default outlined chip border color</td>
+		</tr>
+		<tr>
+			<td><code>chip.outlined.default.text</code></td>
+			<td>Default outlined chip label color</td>
+		</tr>
+		<tr>
+			<td><code>chip.outlined.primary.border</code></td>
+			<td>Primary outlined chip border color</td>
+		</tr>
+		<tr>
+			<td><code>chip.outlined.primary.text</code></td>
+			<td>Primary outlined chip label color</td>
+		</tr>
+		<tr>
+			<td><code>chip.outlined.secondary.border</code></td>
+			<td>Secondary outlined chip border color</td>
+		</tr>
+		<tr>
+			<td><code>chip.outlined.error.border</code></td>
+			<td>Error outlined chip border color</td>
+		</tr>
+	</tbody>
+</table>
+
+### Size tokens
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>chip.size.small.height</code></td>
+			<td>Height of the small chip</td>
+		</tr>
+		<tr>
+			<td><code>chip.size.small.fontSize</code></td>
+			<td>Font size for the small chip label</td>
+		</tr>
+		<tr>
+			<td><code>chip.size.small.paddingX</code></td>
+			<td>Horizontal padding for the small chip</td>
+		</tr>
+		<tr>
+			<td><code>chip.size.medium.height</code></td>
+			<td>Height of the medium chip</td>
+		</tr>
+		<tr>
+			<td><code>chip.size.medium.fontSize</code></td>
+			<td>Font size for the medium chip label</td>
+		</tr>
+		<tr>
+			<td><code>chip.size.medium.paddingX</code></td>
+			<td>Horizontal padding for the medium chip</td>
+		</tr>
+		<tr>
+			<td><code>chip.borderRadius</code></td>
+			<td>Border radius applied to all chip variants</td>
+		</tr>
+	</tbody>
+</table>

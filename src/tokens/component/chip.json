@@ -1,0 +1,52 @@
+{
+	"chip": {
+		"filled": {
+			"default": {
+				"background": { "$type": "color", "$value": "{chip.semantic.filled.default.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.filled.default.text}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.filled.default.deleteIcon}" }
+			},
+			"primary": {
+				"background": { "$type": "color", "$value": "{chip.semantic.filled.primary.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.filled.primary.text}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.filled.primary.deleteIcon}" }
+			},
+			"secondary": {
+				"background": { "$type": "color", "$value": "{chip.semantic.filled.secondary.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.filled.secondary.text}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.filled.secondary.deleteIcon}" }
+			},
+			"error": {
+				"background": { "$type": "color", "$value": "{chip.semantic.filled.error.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.filled.error.text}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.filled.error.deleteIcon}" }
+			}
+		},
+		"outlined": {
+			"default": {
+				"background": { "$type": "color", "$value": "{chip.semantic.outlined.default.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.outlined.default.text}" },
+				"border": { "$type": "color", "$value": "{chip.semantic.outlined.default.border}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.outlined.default.deleteIcon}" }
+			},
+			"primary": {
+				"background": { "$type": "color", "$value": "{chip.semantic.outlined.primary.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.outlined.primary.text}" },
+				"border": { "$type": "color", "$value": "{chip.semantic.outlined.primary.border}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.outlined.primary.deleteIcon}" }
+			},
+			"secondary": {
+				"background": { "$type": "color", "$value": "{chip.semantic.outlined.secondary.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.outlined.secondary.text}" },
+				"border": { "$type": "color", "$value": "{chip.semantic.outlined.secondary.border}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.outlined.secondary.deleteIcon}" }
+			},
+			"error": {
+				"background": { "$type": "color", "$value": "{chip.semantic.outlined.error.background}" },
+				"text": { "$type": "color", "$value": "{chip.semantic.outlined.error.text}" },
+				"border": { "$type": "color", "$value": "{chip.semantic.outlined.error.border}" },
+				"deleteIcon": { "$type": "color", "$value": "{chip.semantic.outlined.error.deleteIcon}" }
+			}
+		}
+	}
+}

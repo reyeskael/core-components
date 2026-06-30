@@ -1,0 +1,54 @@
+{
+	"chip": {
+		"semantic": {
+			"filled": {
+				"default": {
+					"background": { "$type": "color", "$value": "{chip.color.default.background}" },
+					"text": { "$type": "color", "$value": "{chip.color.default.text}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.default.deleteIcon}" }
+				},
+				"primary": {
+					"background": { "$type": "color", "$value": "{chip.color.primary.background}" },
+					"text": { "$type": "color", "$value": "{chip.color.primary.text}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.primary.deleteIcon}" }
+				},
+				"secondary": {
+					"background": { "$type": "color", "$value": "{chip.color.secondary.background}" },
+					"text": { "$type": "color", "$value": "{chip.color.secondary.text}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.secondary.deleteIcon}" }
+				},
+				"error": {
+					"background": { "$type": "color", "$value": "{chip.color.error.background}" },
+					"text": { "$type": "color", "$value": "{chip.color.error.text}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.error.deleteIcon}" }
+				}
+			},
+			"outlined": {
+				"default": {
+					"background": { "$type": "color", "$value": "{color.transparent}" },
+					"text": { "$type": "color", "$value": "{chip.color.default.text}" },
+					"border": { "$type": "color", "$value": "{chip.color.default.border}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.default.deleteIcon}" }
+				},
+				"primary": {
+					"background": { "$type": "color", "$value": "{color.transparent}" },
+					"text": { "$type": "color", "$value": "{chip.color.primary.border}" },
+					"border": { "$type": "color", "$value": "{chip.color.primary.border}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.primary.border}" }
+				},
+				"secondary": {
+					"background": { "$type": "color", "$value": "{color.transparent}" },
+					"text": { "$type": "color", "$value": "{chip.color.secondary.border}" },
+					"border": { "$type": "color", "$value": "{chip.color.secondary.border}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.secondary.border}" }
+				},
+				"error": {
+					"background": { "$type": "color", "$value": "{color.transparent}" },
+					"text": { "$type": "color", "$value": "{chip.color.error.border}" },
+					"border": { "$type": "color", "$value": "{chip.color.error.border}" },
+					"deleteIcon": { "$type": "color", "$value": "{chip.color.error.border}" }
+				}
+			}
+		}
+	}
+}

@@ -91,6 +91,145 @@ export const tokens = {
 			}
 		}
 	},
+	"chip": {
+		"filled": {
+			"default": {
+				"background": "#E0E0E0",
+				"text": "#000000",
+				"deleteIcon": "#757575"
+			},
+			"primary": {
+				"background": "#128C7E",
+				"text": "#FFFFFF",
+				"deleteIcon": "#FFFFFF"
+			},
+			"secondary": {
+				"background": "#FFD600",
+				"text": "#000000",
+				"deleteIcon": "#000000"
+			},
+			"error": {
+				"background": "#D32F2F",
+				"text": "#FFFFFF",
+				"deleteIcon": "#FFFFFF"
+			}
+		},
+		"outlined": {
+			"default": {
+				"background": "transparent",
+				"text": "#000000",
+				"border": "#BDBDBD",
+				"deleteIcon": "#757575"
+			},
+			"primary": {
+				"background": "transparent",
+				"text": "#128C7E",
+				"border": "#128C7E",
+				"deleteIcon": "#128C7E"
+			},
+			"secondary": {
+				"background": "transparent",
+				"text": "#FFD600",
+				"border": "#FFD600",
+				"deleteIcon": "#FFD600"
+			},
+			"error": {
+				"background": "transparent",
+				"text": "#D32F2F",
+				"border": "#D32F2F",
+				"deleteIcon": "#D32F2F"
+			}
+		},
+		"color": {
+			"default": {
+				"background": "#E0E0E0",
+				"text": "#000000",
+				"border": "#BDBDBD",
+				"deleteIcon": "#757575"
+			},
+			"primary": {
+				"background": "#128C7E",
+				"text": "#FFFFFF",
+				"border": "#128C7E",
+				"deleteIcon": "#FFFFFF"
+			},
+			"secondary": {
+				"background": "#FFD600",
+				"text": "#000000",
+				"border": "#FFD600",
+				"deleteIcon": "#000000"
+			},
+			"error": {
+				"background": "#D32F2F",
+				"text": "#FFFFFF",
+				"border": "#D32F2F",
+				"deleteIcon": "#FFFFFF"
+			}
+		},
+		"size": {
+			"small": {
+				"height": "24px",
+				"fontSize": "12px",
+				"paddingX": "8px"
+			},
+			"medium": {
+				"height": "32px",
+				"fontSize": "14px",
+				"paddingX": "12px"
+			}
+		},
+		"borderRadius": "16px",
+		"semantic": {
+			"filled": {
+				"default": {
+					"background": "#E0E0E0",
+					"text": "#000000",
+					"deleteIcon": "#757575"
+				},
+				"primary": {
+					"background": "#128C7E",
+					"text": "#FFFFFF",
+					"deleteIcon": "#FFFFFF"
+				},
+				"secondary": {
+					"background": "#FFD600",
+					"text": "#000000",
+					"deleteIcon": "#000000"
+				},
+				"error": {
+					"background": "#D32F2F",
+					"text": "#FFFFFF",
+					"deleteIcon": "#FFFFFF"
+				}
+			},
+			"outlined": {
+				"default": {
+					"background": "transparent",
+					"text": "#000000",
+					"border": "#BDBDBD",
+					"deleteIcon": "#757575"
+				},
+				"primary": {
+					"background": "transparent",
+					"text": "#128C7E",
+					"border": "#128C7E",
+					"deleteIcon": "#128C7E"
+				},
+				"secondary": {
+					"background": "transparent",
+					"text": "#FFD600",
+					"border": "#FFD600",
+					"deleteIcon": "#FFD600"
+				},
+				"error": {
+					"background": "transparent",
+					"text": "#D32F2F",
+					"border": "#D32F2F",
+					"deleteIcon": "#D32F2F"
+				}
+			}
+		}
+	},
 	"header": {
 		"background": "#FFFFFF",
 		"paddingX": "20px",
