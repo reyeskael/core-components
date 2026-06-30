@@ -1,4 +1,8 @@
 import type { Preview } from '@storybook/react-webpack5'
+import React from 'react'
+import { ThemeProvider } from '@mui/material/styles'
+import { CssBaseline } from '@mui/material'
+import theme from '../src/theme'
 import './preview.css'
 
 const preview: Preview = {
@@ -10,6 +14,14 @@ const preview: Preview = {
 			},
 		},
 	},
+	decorators: [
+		(Story) => (
+			<ThemeProvider theme={theme}>
+				<CssBaseline />
+				<Story />
+			</ThemeProvider>
+		),
+	],
 };
 
 export default preview;
