@@ -1,0 +1,28 @@
+{
+	"typography": {
+		"fontFamily": {
+			"base": { "$type": "string", "$value": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif" }
+		},
+		"fontSize": {
+			"xs":      { "$type": "dimension", "$value": "12px" },
+			"sm":      { "$type": "dimension", "$value": "14px" },
+			"md":      { "$type": "dimension", "$value": "16px" },
+			"lg":      { "$type": "dimension", "$value": "20px" },
+			"xl":      { "$type": "dimension", "$value": "24px" },
+			"xxl":     { "$type": "dimension", "$value": "28px" },
+			"xxxl":    { "$type": "dimension", "$value": "32px" },
+			"display": { "$type": "dimension", "$value": "40px" }
+		},
+		"fontWeight": {
+			"regular":  { "$type": "number", "$value": 400 },
+			"medium":   { "$type": "number", "$value": 500 },
+			"semibold": { "$type": "number", "$value": 600 },
+			"bold":     { "$type": "number", "$value": 700 }
+		},
+		"lineHeight": {
+			"tight":   { "$type": "number", "$value": 1.2 },
+			"normal":  { "$type": "number", "$value": 1.5 },
+			"relaxed": { "$type": "number", "$value": 1.75 }
+		}
+	}
+}

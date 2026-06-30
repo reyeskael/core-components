@@ -1,0 +1,76 @@
+{
+	"typography": {
+		"h1": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.display}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"h2": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.xxxl}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"h3": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.xxl}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"h4": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.xl}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"h5": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.lg}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"h6": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.heading.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.md}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.heading.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.heading.lineHeight}" }
+		},
+		"body1": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.body.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.md}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.body.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.body.lineHeight}" }
+		},
+		"body2": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.body.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.sm}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.body.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.body.lineHeight}" }
+		},
+		"subtitle1": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.label.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.md}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.label.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.label.lineHeight}" }
+		},
+		"subtitle2": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.label.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.sm}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.label.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.label.lineHeight}" }
+		},
+		"caption": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.body.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.xs}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.body.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.body.lineHeight}" }
+		},
+		"overline": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.label.fontFamily}" },
+			"fontSize":   { "$type": "dimension", "$value": "{typography.fontSize.xs}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.label.fontWeight}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.label.lineHeight}" }
+		}
+	}
+}

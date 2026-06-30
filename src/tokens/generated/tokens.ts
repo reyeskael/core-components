@@ -106,6 +106,119 @@ export const tokens = {
 			"color": "#333333"
 		}
 	},
+	"typography": {
+		"h1": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "40px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"h2": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "32px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"h3": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "28px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"h4": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "24px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"h5": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "20px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"h6": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "16px",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"body1": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "16px",
+			"fontWeight": 400,
+			"lineHeight": 1.5
+		},
+		"body2": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "14px",
+			"fontWeight": 400,
+			"lineHeight": 1.5
+		},
+		"subtitle1": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "16px",
+			"fontWeight": 500,
+			"lineHeight": 1.5
+		},
+		"subtitle2": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "14px",
+			"fontWeight": 500,
+			"lineHeight": 1.5
+		},
+		"caption": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "12px",
+			"fontWeight": 400,
+			"lineHeight": 1.5
+		},
+		"overline": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontSize": "12px",
+			"fontWeight": 500,
+			"lineHeight": 1.5
+		},
+		"fontFamily": {
+			"base": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif"
+		},
+		"fontSize": {
+			"xs": "12px",
+			"sm": "14px",
+			"md": "16px",
+			"lg": "20px",
+			"xl": "24px",
+			"xxl": "28px",
+			"xxxl": "32px",
+			"display": "40px"
+		},
+		"fontWeight": {
+			"regular": 400,
+			"medium": 500,
+			"semibold": 600,
+			"bold": 700
+		},
+		"lineHeight": {
+			"tight": 1.2,
+			"normal": 1.5,
+			"relaxed": 1.75
+		},
+		"heading": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontWeight": 700,
+			"lineHeight": 1.2
+		},
+		"body": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontWeight": 400,
+			"lineHeight": 1.5
+		},
+		"label": {
+			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",
+			"fontWeight": 500,
+			"lineHeight": 1.5
+		}
+	},
 	"color": {
 		"green": {
 			"400": "#17B3A1",

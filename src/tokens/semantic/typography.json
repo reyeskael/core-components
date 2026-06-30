@@ -1,0 +1,19 @@
+{
+	"typography": {
+		"heading": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.fontFamily.base}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.fontWeight.bold}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.lineHeight.tight}" }
+		},
+		"body": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.fontFamily.base}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.fontWeight.regular}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.lineHeight.normal}" }
+		},
+		"label": {
+			"fontFamily": { "$type": "string",    "$value": "{typography.fontFamily.base}" },
+			"fontWeight": { "$type": "number",    "$value": "{typography.fontWeight.medium}" },
+			"lineHeight": { "$type": "number",    "$value": "{typography.lineHeight.normal}" }
+		}
+	}
+}
