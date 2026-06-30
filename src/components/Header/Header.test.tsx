@@ -72,12 +72,16 @@ describe('Header', () => {
 	});
 
 	describe('logo', () => {
-		it('renders logo SVG', () => {
-			const { container } = render(<Header />);
-			const svg = container.querySelector('svg');
-			expect(svg).toBeInTheDocument();
-			expect(svg).toHaveAttribute('width', '32');
-			expect(svg).toHaveAttribute('height', '32');
+		it('renders logo image when logoUrl is provided', () => {
+			render(<Header logoUrl="https://example.com/logo.png" />);
+			const img = screen.getByRole('img', { name: /logo/i });
+			expect(img).toBeInTheDocument();
+			expect(img).toHaveAttribute('src', 'https://example.com/logo.png');
+		});
+
+		it('renders no logo when logoUrl is not provided', () => {
+			render(<Header />);
+			expect(screen.queryByRole('img', { name: /logo/i })).not.toBeInTheDocument();
 		});
 	});
 

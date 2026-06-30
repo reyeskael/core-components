@@ -1,54 +1,62 @@
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import { Button } from '../Button';
-import './header.css';
 
 type User = {
-  name: string;
+	name: string;
 };
 
 export interface HeaderProps {
-  user?: User;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
+	logoUrl?: string;
+	user?: User;
+	onLogin?: () => void;
+	onLogout?: () => void;
+	onCreateAccount?: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
-    <div className="storybook-header">
-      <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
-      </div>
-      <div>
-        {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout}>Log out</Button>
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin}>Log in</Button>
-            <Button size="small" onClick={onCreateAccount}>Sign up</Button>
-          </>
-        )}
-      </div>
-    </div>
-  </header>
+export const Header = ({ logoUrl, user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+	<AppBar
+		position="static"
+		color="default"
+		elevation={0}
+		sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}
+	>
+		<Toolbar
+			disableGutters
+			sx={{ justifyContent: 'space-between', px: '20px', py: '15px' }}
+		>
+			<Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
+				{logoUrl && (
+					<Box
+						component="img"
+						src={logoUrl}
+						alt="logo"
+						sx={{ width: 32, height: 32, display: 'block' }}
+					/>
+				)}
+				<Typography variant="h6" sx={{ fontWeight: 700, lineHeight: 1 }}>
+					Acme
+				</Typography>
+			</Stack>
+
+			<Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
+				{user ? (
+					<>
+						<Typography variant="body2" sx={{ color: '#333' }}>
+							Welcome, <Box component="b">{user.name}</Box>!
+						</Typography>
+						<Button size="small" onClick={onLogout}>Log out</Button>
+					</>
+				) : (
+					<>
+						<Button size="small" onClick={onLogin}>Log in</Button>
+						<Button size="small" onClick={onCreateAccount}>Sign up</Button>
+					</>
+				)}
+			</Stack>
+		</Toolbar>
+	</AppBar>
 );
