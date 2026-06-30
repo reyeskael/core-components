@@ -1,0 +1,99 @@
+## Header Component
+
+The Header component is a top-level navigation bar built on Material-UI's AppBar. It handles logo display, user authentication state, and action buttons in a consistent layout.
+
+## Overview
+
+The Header adapts its right-hand controls based on whether a `user` is provided. When a user is logged in it shows a welcome message and a log-out button; when no user is present it shows log-in and sign-up buttons.
+
+[📖 View Header Storybook](?path=/docs/stories-header--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>logoUrl</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>URL of the logo image displayed on the left side of the header</td>
+		</tr>
+		<tr>
+			<td><code>user</code></td>
+			<td><code>&#123; name: string &#125;</code></td>
+			<td><code>undefined</code></td>
+			<td>Authenticated user object; when present the header shows a welcome message and log-out button</td>
+		</tr>
+		<tr>
+			<td><code>onLogin</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the Log in button is clicked</td>
+		</tr>
+		<tr>
+			<td><code>onLogout</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the Log out button is clicked</td>
+		</tr>
+		<tr>
+			<td><code>onCreateAccount</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the Sign up button is clicked</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+The Header is styled through the following token path:
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>header.background</code></td>
+			<td>AppBar background color</td>
+		</tr>
+		<tr>
+			<td><code>header.paddingX</code></td>
+			<td>Horizontal toolbar padding</td>
+		</tr>
+		<tr>
+			<td><code>header.paddingY</code></td>
+			<td>Vertical toolbar padding</td>
+		</tr>
+		<tr>
+			<td><code>header.border.width</code></td>
+			<td>Bottom border width</td>
+		</tr>
+		<tr>
+			<td><code>header.border.color</code></td>
+			<td>Bottom border color</td>
+		</tr>
+		<tr>
+			<td><code>header.title.color</code></td>
+			<td>Brand title text color</td>
+		</tr>
+		<tr>
+			<td><code>header.welcomeText.color</code></td>
+			<td>Logged-in welcome message text color</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/app-bar/" target="_blank" rel="noopener noreferrer">Material-UI AppBar documentation</a>.

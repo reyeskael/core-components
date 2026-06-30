@@ -1,0 +1,172 @@
+## Typography Component
+
+The Typography component is a type-scale wrapper built on Material-UI's Typography. It provides consistent, token-driven text styles across all heading, body, and label variants.
+
+## Overview
+
+Typography maps every variant to a resolved set of design tokens — font family, size, weight, and line height — via the MUI theme. Swapping a brand's token values is all that is needed to restyle the entire type scale.
+
+[📖 View Typography Storybook](?path=/docs/stories-typography--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>variant</code></td>
+			<td><code>h1 | h2 | h3 | h4 | h5 | h6 | subtitle1 | subtitle2 | body1 | body2 | caption | overline | inherit</code></td>
+			<td><code>body1</code></td>
+			<td>The typographic style variant to apply</td>
+		</tr>
+		<tr>
+			<td><code>component</code></td>
+			<td><code>ElementType</code></td>
+			<td>Mapped from variant</td>
+			<td>Override the root HTML element (e.g. render an <code>h1</code> variant as a <code>p</code>)</td>
+		</tr>
+		<tr>
+			<td><code>align</code></td>
+			<td><code>left | center | right | justify | inherit</code></td>
+			<td><code>inherit</code></td>
+			<td>Text alignment</td>
+		</tr>
+		<tr>
+			<td><code>gutterBottom</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Adds a bottom margin equal to 0.35em</td>
+		</tr>
+		<tr>
+			<td><code>noWrap</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Prevents text from wrapping and adds an ellipsis on overflow</td>
+		</tr>
+		<tr>
+			<td><code>paragraph</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Renders as a <code>&lt;p&gt;</code> tag and adds a bottom margin</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+Each variant is backed by three tiers of tokens:
+
+### Primitive (`src/tokens/primitive/typography.json`)
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>typography.fontFamily.base</code></td>
+			<td><code>"Roboto", "Helvetica", "Arial", sans-serif</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.xs</code></td>
+			<td><code>12px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.sm</code></td>
+			<td><code>14px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.md</code></td>
+			<td><code>16px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.lg</code></td>
+			<td><code>20px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.xl</code></td>
+			<td><code>24px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.xxl</code></td>
+			<td><code>28px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.xxxl</code></td>
+			<td><code>32px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontSize.display</code></td>
+			<td><code>40px</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontWeight.regular</code></td>
+			<td><code>400</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontWeight.medium</code></td>
+			<td><code>500</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontWeight.semibold</code></td>
+			<td><code>600</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.fontWeight.bold</code></td>
+			<td><code>700</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.lineHeight.tight</code></td>
+			<td><code>1.2</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.lineHeight.normal</code></td>
+			<td><code>1.5</code></td>
+		</tr>
+		<tr>
+			<td><code>typography.lineHeight.relaxed</code></td>
+			<td><code>1.75</code></td>
+		</tr>
+	</tbody>
+</table>
+
+### Semantic (`src/tokens/semantic/typography.json`)
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Semantic role</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>typography.heading.*</code></td>
+			<td>Bold weight, tight line height — used by h1–h6</td>
+		</tr>
+		<tr>
+			<td><code>typography.body.*</code></td>
+			<td>Regular weight, normal line height — used by body1, body2, caption</td>
+		</tr>
+		<tr>
+			<td><code>typography.label.*</code></td>
+			<td>Medium weight, normal line height — used by subtitle1, subtitle2, overline</td>
+		</tr>
+	</tbody>
+</table>
+
+### Component (`src/tokens/component/typography.json`)
+
+Each MUI variant name (e.g. `typography.h1`, `typography.body2`) maps to `fontFamily`, `fontSize`, `fontWeight`, and `lineHeight` properties resolved from the semantic tier.
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/typography/" target="_blank" rel="noopener noreferrer">Material-UI Typography documentation</a>.
