@@ -13,8 +13,13 @@
 			}
 		},
 		"text": {
+			"primary": { "$type": "color", "$value": "{color.black}" },
+			"secondary": { "$type": "color", "$value": "{color.gray.800}" },
 			"onPrimary": { "$type": "color", "$value": "{color.white}" },
 			"onSecondary": { "$type": "color", "$value": "{color.black}" }
+		},
+		"border": {
+			"divider": { "$type": "color", "$value": "rgba(0, 0, 0, 0.1)" }
 		},
 		"surface": {
 			"default": { "$type": "color", "$value": "{color.white}" }

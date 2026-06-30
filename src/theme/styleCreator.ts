@@ -2,6 +2,7 @@ import type { ThemeOptions } from '@mui/material/styles';
 import generatedTokens, { Tokens } from '../tokens/generated/tokens';
 import { createPalette } from './palette';
 import { muiButton } from './components/button';
+import { muiAppBar, muiToolbar } from './components/header';
 
 /**
  * Assembles MUI `ThemeOptions` from a token set.
@@ -20,6 +21,8 @@ export const createThemeFromTokens = (
 	palette: createPalette(tokens),
 	components: {
 		MuiButton: muiButton(tokens),
+		MuiAppBar: muiAppBar(tokens),
+		MuiToolbar: muiToolbar(tokens),
 	},
 });
 

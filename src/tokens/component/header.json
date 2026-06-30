@@ -1,0 +1,17 @@
+{
+	"header": {
+		"background": { "$type": "color", "$value": "{color.surface.default}" },
+		"paddingX": { "$type": "dimension", "$value": "{dimension.5}" },
+		"paddingY": { "$type": "dimension", "$value": "15px" },
+		"border": {
+			"width": { "$type": "dimension", "$value": "1px" },
+			"color": { "$type": "color", "$value": "{color.border.divider}" }
+		},
+		"title": {
+			"color": { "$type": "color", "$value": "{color.text.primary}" }
+		},
+		"welcomeText": {
+			"color": { "$type": "color", "$value": "{color.text.secondary}" }
+		}
+	}
+}

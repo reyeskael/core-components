@@ -18,16 +18,8 @@ export interface HeaderProps {
 }
 
 export const Header = ({ logoUrl, user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-	<AppBar
-		position="static"
-		color="default"
-		elevation={0}
-		sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}
-	>
-		<Toolbar
-			disableGutters
-			sx={{ justifyContent: 'space-between', px: '20px', py: '15px' }}
-		>
+	<AppBar position="static" color="default" elevation={0}>
+		<Toolbar sx={{ justifyContent: 'space-between' }}>
 			<Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
 				{logoUrl && (
 					<Box
@@ -45,7 +37,7 @@ export const Header = ({ logoUrl, user, onLogin, onLogout, onCreateAccount }: He
 			<Stack direction="row" spacing={1.25} sx={{ alignItems: 'center' }}>
 				{user ? (
 					<>
-						<Typography variant="body2" sx={{ color: '#333' }}>
+						<Typography variant="body2" color="text.secondary">
 							Welcome, <Box component="b">{user.name}</Box>!
 						</Typography>
 						<Button size="small" onClick={onLogout}>Log out</Button>

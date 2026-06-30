@@ -10,6 +10,9 @@
 			"500": { "$type": "color", "$value": "#FFD600" },
 			"600": { "$type": "color", "$value": "#CCAB00" }
 		},
+		"gray": {
+			"800": { "$type": "color", "$value": "#333333" }
+		},
 		"white": { "$type": "color", "$value": "#FFFFFF" },
 		"black": { "$type": "color", "$value": "#000000" },
 		"transparent": { "$type": "color", "$value": "transparent" }

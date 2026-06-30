@@ -29,7 +29,8 @@ export const createPalette = (tokens: Tokens): PaletteOptions => {
 			paper: color.surface.default,
 		},
 		text: {
-			primary: color.black,
+			primary: color.text.primary,
+			secondary: color.text.secondary,
 		},
 	};
 };

@@ -91,6 +91,21 @@ export const tokens = {
 			}
 		}
 	},
+	"header": {
+		"background": "#FFFFFF",
+		"paddingX": "20px",
+		"paddingY": "15px",
+		"border": {
+			"width": "1px",
+			"color": "rgba(0, 0, 0, 0.1)"
+		},
+		"title": {
+			"color": "#000000"
+		},
+		"welcomeText": {
+			"color": "#333333"
+		}
+	},
 	"color": {
 		"green": {
 			"400": "#17B3A1",
@@ -101,6 +116,9 @@ export const tokens = {
 			"400": "#FFE033",
 			"500": "#FFD600",
 			"600": "#CCAB00"
+		},
+		"gray": {
+			"800": "#333333"
 		},
 		"white": "#FFFFFF",
 		"black": "#000000",
@@ -118,12 +136,24 @@ export const tokens = {
 			}
 		},
 		"text": {
+			"primary": "#000000",
+			"secondary": "#333333",
 			"onPrimary": "#FFFFFF",
 			"onSecondary": "#000000"
+		},
+		"border": {
+			"divider": "rgba(0, 0, 0, 0.1)"
 		},
 		"surface": {
 			"default": "#FFFFFF"
 		}
+	},
+	"dimension": {
+		"1": "4px",
+		"2": "8px",
+		"3": "12px",
+		"4": "16px",
+		"5": "20px"
 	}
 } as const;
 
