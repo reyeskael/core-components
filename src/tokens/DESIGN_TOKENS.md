@@ -280,10 +280,35 @@ checker know every path and that `tokens.color.green[500]` is exactly
 
 ## How tokens reach the theme
 
-[`src/theme/styleCreator.ts`](../theme/styleCreator.ts) imports the generated
-object and maps it onto Material-UI's theme shape. Two things happen there:
+The theme layer is **modular and brand-ready**: every piece is a *pure function
+of a token set*, so the same logic can build a theme for any brand simply by
+passing that brand's tokens. The layout:
 
-**1. The MUI palette** is wired from semantic tokens:
+```
+src/theme/
+├── index.ts            createTheme(createThemeFromTokens())  → exported theme
+├── styleCreator.ts     thin composer: assembles palette + components
+├── palette.ts          createPalette(tokens)  → MUI PaletteOptions
+└── components/
+    └── button.ts       muiButton(tokens)      → MUI MuiButton overrides
+```
+
+**The composer** ([`styleCreator.ts`](../theme/styleCreator.ts)) wires the pieces
+together and takes the token set as an argument (defaulting to the generated
+single-brand set):
+
+```ts
+export const createThemeFromTokens = (tokens: Tokens = generatedTokens): ThemeOptions => ({
+  palette: createPalette(tokens),
+  components: {
+    MuiButton: muiButton(tokens),
+    // add a component → import its module and add one line here
+  },
+});
+```
+
+**The palette** ([`palette.ts`](../theme/palette.ts)) is wired from semantic
+tokens:
 
 ```ts
 palette: {
@@ -297,10 +322,11 @@ palette: {
 }
 ```
 
-**2. Button variant overrides** are generated from component tokens. For each
-`variant × concept` (e.g. `contained × primary`) it produces the MUI slot key
-(`containedPrimary`) under `MuiButton.styleOverrides`, with `default` / `hover` /
-`pressed` mapped to the base style, `&:hover`, and `&:active`:
+**Each component module** ([`components/button.ts`](../theme/components/button.ts))
+turns its component tokens into MUI overrides. The button module derives its
+`variant × concept` matrix from the token tree (no hardcoded lists), and for
+each combination emits the MUI slot key (`containedPrimary`) with `default` /
+`hover` / `pressed` mapped to the base style, `&:hover`, and `&:active`:
 
 ```ts
 styleOverrides: {
@@ -311,12 +337,17 @@ styleOverrides: {
     '&:hover':  { backgroundColor: '#17B3A1', /* ... */ },
     '&:active': { backgroundColor: '#0E6E63', /* ... */ },
   },
-  // outlinedPrimary, textSecondary, ...
+  // outlinedPrimary (with border), textSecondary, ...
 }
 ```
 
-`src/theme/index.ts` then feeds this into `createTheme()`, and
+`index.ts` feeds the composed options into `createTheme()`, and
 `.storybook/preview.tsx` wraps every story in the resulting `<ThemeProvider>`.
+
+> **Multiple brands.** Because `createThemeFromTokens(tokens)` takes its tokens
+> as input, a second brand is just a second token set passed in —
+> `createTheme(createThemeFromTokens(horseshoeTokens))` — with no change to the
+> palette or component modules, as long as the brand shares the token structure.
 
 ---
 
@@ -340,7 +371,10 @@ styleOverrides: {
 1. Create `component/<name>.json` (it's picked up automatically by the glob).
 2. Define tokens that reference **semantic** tokens, not primitives directly.
 3. `yarn build:tokens`.
-4. Map the new tokens onto MUI in `src/theme/styleCreator.ts`.
+4. Add a module `src/theme/components/<name>.ts` exporting a
+   `(tokens) => Components<Theme>['MuiX']` mapper (mirror
+   [`components/button.ts`](../theme/components/button.ts)).
+5. Register it with one line in `src/theme/styleCreator.ts`'s `components` map.
 
 ### Re-theme / re-brand
 
@@ -390,4 +424,8 @@ hardcoding a string. The build deliberately skips value transforms so
 **Can I add non-color tokens (spacing, radius, typography)?**
 Yes — that's the intended growth path. Add new files (e.g.
 `primitive/dimension.json`) with the appropriate `$type`, follow the same
-three-tier flow, and map them onto the theme in `styleCreator.ts`.
+three-tier flow, and map them onto the theme (palette/typography/spacing in the
+composer, component-specific values in the relevant `components/*` module). Note
+the build currently runs no value transforms; non-color types such as
+`dimension` will need a type-filtered transform (e.g. `size/px`) added in
+[`scripts/build-tokens.mjs`](../../scripts/build-tokens.mjs).
