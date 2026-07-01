@@ -3,6 +3,7 @@ import generatedTokens, { Tokens } from '../tokens/generated/tokens';
 import { createPalette } from './palette';
 import { muiButton } from './components/button';
 import { muiChip } from './components/chip';
+import { muiAccordion, muiAccordionSummary, muiAccordionDetails } from './components/accordion';
 import { muiAppBar, muiToolbar } from './components/header';
 import { muiTypography } from './components/typography';
 
@@ -25,6 +26,9 @@ export const createThemeFromTokens = (
 	components: {
 		MuiButton: muiButton(tokens),
 		MuiChip: muiChip(tokens),
+		MuiAccordion: muiAccordion(tokens),
+		MuiAccordionSummary: muiAccordionSummary(tokens),
+		MuiAccordionDetails: muiAccordionDetails(tokens),
 		MuiAppBar: muiAppBar(tokens),
 		MuiToolbar: muiToolbar(tokens),
 	},

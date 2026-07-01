@@ -1,0 +1,23 @@
+{
+	"accordion": {
+		"semantic": {
+			"surface": {
+				"default": { "$type": "color", "$value": "{accordion.color.background}" },
+				"expanded": { "$type": "color", "$value": "{accordion.color.summaryBackgroundExpanded}" }
+			},
+			"border": { "$type": "color", "$value": "{accordion.color.border}" },
+			"text": {
+				"primary": { "$type": "color", "$value": "{accordion.color.text.primary}" },
+				"secondary": { "$type": "color", "$value": "{accordion.color.text.secondary}" }
+			},
+			"icon": { "$type": "color", "$value": "{accordion.color.icon}" },
+			"spacing": {
+				"borderRadius": { "$type": "dimension", "$value": "{accordion.spacing.borderRadius}" },
+				"summaryPaddingX": { "$type": "dimension", "$value": "{accordion.spacing.summaryPaddingX}" },
+				"summaryMinHeight": { "$type": "dimension", "$value": "{accordion.spacing.summaryMinHeight}" },
+				"detailsPaddingX": { "$type": "dimension", "$value": "{accordion.spacing.detailsPaddingX}" },
+				"detailsPaddingY": { "$type": "dimension", "$value": "{accordion.spacing.detailsPaddingY}" }
+			}
+		}
+	}
+}

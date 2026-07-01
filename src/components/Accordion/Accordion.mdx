@@ -1,0 +1,151 @@
+## Accordion Component
+
+The Accordion component is a collapsible panel built on top of Material-UI's Accordion, pairing a always-visible summary (e.g. a question) with details that expand and collapse on click (e.g. an answer).
+
+## Overview
+
+Accordions let users scan a list of topics and reveal only the content they care about — commonly used for FAQs, settings groups, and other progressively-disclosed content.
+
+[📖 View Accordion Storybook](?path=/docs/stories-accordion--docs)
+
+## Props
+
+The Accordion component accepts all standard Material-UI Accordion props, plus `summary`:
+
+<table>
+	<thead>
+		<tr>
+			<th>Props</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>summary</code></td>
+			<td><code>ReactNode</code></td>
+			<td>—</td>
+			<td>The always-visible header content (e.g. the question)</td>
+		</tr>
+		<tr>
+			<td><code>children</code></td>
+			<td><code>ReactNode</code></td>
+			<td>—</td>
+			<td>The content revealed when expanded (e.g. the answer)</td>
+		</tr>
+		<tr>
+			<td><code>expanded</code></td>
+			<td><code>boolean</code></td>
+			<td><code>undefined</code></td>
+			<td>Controls the expanded state; pair with <code>onChange</code> for a controlled accordion</td>
+		</tr>
+		<tr>
+			<td><code>defaultExpanded</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the accordion is expanded by default (uncontrolled)</td>
+		</tr>
+		<tr>
+			<td><code>disabled</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the accordion is disabled</td>
+		</tr>
+		<tr>
+			<td><code>onChange</code></td>
+			<td><code>(event: SyntheticEvent, expanded: boolean) => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the expanded state changes</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/accordion/" target="_blank" rel="noopener noreferrer">Material-UI Accordion documentation</a>.
+
+## Design tokens
+
+Accordion styles are driven by three tiers of tokens, mapped to the root container, the summary (question) row, and the details (answer) region.
+
+### Root
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>accordion.root.background</code></td>
+			<td>Container background color</td>
+		</tr>
+		<tr>
+			<td><code>accordion.root.border</code></td>
+			<td>Container border color</td>
+		</tr>
+		<tr>
+			<td><code>accordion.root.borderRadius</code></td>
+			<td>Container corner radius</td>
+		</tr>
+	</tbody>
+</table>
+
+### Summary
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>accordion.summary.text</code></td>
+			<td>Summary label color</td>
+		</tr>
+		<tr>
+			<td><code>accordion.summary.icon</code></td>
+			<td>Expand icon color</td>
+		</tr>
+		<tr>
+			<td><code>accordion.summary.backgroundExpanded</code></td>
+			<td>Summary background color while expanded</td>
+		</tr>
+		<tr>
+			<td><code>accordion.summary.paddingX</code></td>
+			<td>Summary horizontal padding</td>
+		</tr>
+		<tr>
+			<td><code>accordion.summary.minHeight</code></td>
+			<td>Summary row minimum height</td>
+		</tr>
+	</tbody>
+</table>
+
+### Details
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>accordion.details.text</code></td>
+			<td>Details content color</td>
+		</tr>
+		<tr>
+			<td><code>accordion.details.paddingX</code></td>
+			<td>Details horizontal padding</td>
+		</tr>
+		<tr>
+			<td><code>accordion.details.paddingY</code></td>
+			<td>Details vertical padding</td>
+		</tr>
+	</tbody>
+</table>

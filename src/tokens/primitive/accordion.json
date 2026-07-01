@@ -1,0 +1,21 @@
+{
+	"accordion": {
+		"color": {
+			"background": { "$type": "color", "$value": "#FFFFFF" },
+			"border": { "$type": "color", "$value": "#E0E0E0" },
+			"summaryBackgroundExpanded": { "$type": "color", "$value": "#F5F5F5" },
+			"text": {
+				"primary": { "$type": "color", "$value": "#000000" },
+				"secondary": { "$type": "color", "$value": "#333333" }
+			},
+			"icon": { "$type": "color", "$value": "#000000" }
+		},
+		"spacing": {
+			"borderRadius": { "$type": "dimension", "$value": "8px" },
+			"summaryPaddingX": { "$type": "dimension", "$value": "16px" },
+			"summaryMinHeight": { "$type": "dimension", "$value": "48px" },
+			"detailsPaddingX": { "$type": "dimension", "$value": "16px" },
+			"detailsPaddingY": { "$type": "dimension", "$value": "16px" }
+		}
+	}
+}
