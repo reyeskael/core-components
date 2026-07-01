@@ -1,0 +1,216 @@
+## ProductCard Component
+
+The ProductCard component is a composite commerce card built from MUI primitives. It displays a product's image, badges, name, price, and add-to-cart controls in either a compact `grid` tile or a wider `list` row layout.
+
+## Overview
+
+Use `grid` mode for catalog/listing pages where cards sit side by side, and `list` mode for search results or wishlist views where extra detail (description, stock status, favorite, and a help link) is useful. Quantity and favorite state are controlled by the parent via `quantity`/`onQuantityChange` and `isFavorite`/`onToggleFavorite` — the component holds no internal state.
+
+[📖 View ProductCard Storybook](?path=/docs/stories-productcard--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>mode</code></td>
+			<td><code>'grid' | 'list'</code></td>
+			<td><code>'grid'</code></td>
+			<td>Layout to render — compact vertical tile or wide horizontal row</td>
+		</tr>
+		<tr>
+			<td><code>imageUrl</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>URL of the product image</td>
+		</tr>
+		<tr>
+			<td><code>imageAlt</code></td>
+			<td><code>string</code></td>
+			<td><code>''</code></td>
+			<td>Alt text for the product image</td>
+		</tr>
+		<tr>
+			<td><code>tags</code></td>
+			<td><code>string[]</code></td>
+			<td><code>undefined</code></td>
+			<td>Badge labels rendered over the image corner (e.g. <code>['KETO']</code>)</td>
+		</tr>
+		<tr>
+			<td><code>name</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>Product name</td>
+		</tr>
+		<tr>
+			<td><code>description</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Product description; only rendered in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>price</code></td>
+			<td><code>number</code></td>
+			<td>—</td>
+			<td>Product price</td>
+		</tr>
+		<tr>
+			<td><code>currencySymbol</code></td>
+			<td><code>string</code></td>
+			<td><code>'₱'</code></td>
+			<td>Symbol prefixed to the formatted price</td>
+		</tr>
+		<tr>
+			<td><code>inStock</code></td>
+			<td><code>boolean</code></td>
+			<td><code>undefined</code></td>
+			<td>When set, renders a "Stock: In Stock / Out of Stock" line in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>quantity</code></td>
+			<td><code>number</code></td>
+			<td>—</td>
+			<td>Current quantity shown in the stepper (controlled)</td>
+		</tr>
+		<tr>
+			<td><code>onQuantityChange</code></td>
+			<td><code>(quantity: number) => void</code></td>
+			<td>—</td>
+			<td>Called with the next value when the stepper's arrows are pressed</td>
+		</tr>
+		<tr>
+			<td><code>minQuantity</code></td>
+			<td><code>number</code></td>
+			<td><code>1</code></td>
+			<td>Lower bound for the quantity stepper</td>
+		</tr>
+		<tr>
+			<td><code>maxQuantity</code></td>
+			<td><code>number</code></td>
+			<td><code>undefined</code></td>
+			<td>Upper bound for the quantity stepper</td>
+		</tr>
+		<tr>
+			<td><code>onAddToCart</code></td>
+			<td><code>() => void</code></td>
+			<td>—</td>
+			<td>Called when the add-to-cart button is pressed</td>
+		</tr>
+		<tr>
+			<td><code>addToCartLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>'Add to Cart'</code></td>
+			<td>Label for the add-to-cart button</td>
+		</tr>
+		<tr>
+			<td><code>isFavorite</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the favorite icon renders filled; only shown in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>onToggleFavorite</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>When provided, renders the favorite icon button in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>onQuestionClick</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>When provided, renders a help link in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>questionLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>'Question'</code></td>
+			<td>Label for the help link</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+ProductCard is a composite component with no single MUI counterpart, so its tokens resolve to a plain style object (via <code>productCardStyles</code>) consumed through <code>sx</code> props rather than a registered <code>MuiProductCard</code> override. The KETO-style tag reuses the existing <code>Chip</code> component's <code>secondary</code> color.
+
+### Surface & text
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>productCard.component.surface</code></td>
+			<td>Card background color</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.border</code></td>
+			<td>Border/divider color used by the quantity stepper</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.text.primary</code></td>
+			<td>Product name and price text color</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.text.secondary</code></td>
+			<td>Description and help link text color</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.stock.inStock</code></td>
+			<td>Stock label color when <code>inStock</code> is <code>true</code></td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.stock.outOfStock</code></td>
+			<td>Stock label color when <code>inStock</code> is <code>false</code></td>
+		</tr>
+	</tbody>
+</table>
+
+### Spacing
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>productCard.component.spacing.borderRadius</code></td>
+			<td>Card and quantity stepper corner radius</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.spacing.badgeOffset</code></td>
+			<td>Distance of the tag badges from the image edge</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.spacing.gridWidth</code></td>
+			<td>Fixed card width in <code>grid</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.spacing.gridImageHeight</code></td>
+			<td>Image height in <code>grid</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.spacing.listImageSize</code></td>
+			<td>Image width/height in <code>list</code> mode</td>
+		</tr>
+		<tr>
+			<td><code>productCard.component.spacing.contentGap</code></td>
+			<td>Gap between the quantity stepper and the add-to-cart button</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,0 +1,15 @@
+{
+	"productCard": {
+		"spacing": {
+			"borderRadius":     { "$type": "dimension", "$value": "8px" },
+			"badgeOffset":      { "$type": "dimension", "$value": "8px" },
+			"gridWidth":        { "$type": "dimension", "$value": "220px" },
+			"gridImageHeight":  { "$type": "dimension", "$value": "160px" },
+			"listImageSize":    { "$type": "dimension", "$value": "200px" },
+			"contentGap":       { "$type": "dimension", "$value": "8px" }
+		},
+		"color": {
+			"outOfStock": { "$type": "color", "$value": "#D32F2F" }
+		}
+	}
+}

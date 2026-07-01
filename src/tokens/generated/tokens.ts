@@ -297,6 +297,59 @@ export const tokens = {
 			"color": "#333333"
 		}
 	},
+	"productCard": {
+		"component": {
+			"surface": "#FFFFFF",
+			"border": "rgba(0, 0, 0, 0.1)",
+			"text": {
+				"primary": "#000000",
+				"secondary": "#333333"
+			},
+			"stock": {
+				"inStock": "#128C7E",
+				"outOfStock": "#D32F2F"
+			},
+			"spacing": {
+				"borderRadius": "8px",
+				"badgeOffset": "8px",
+				"gridWidth": "220px",
+				"gridImageHeight": "160px",
+				"listImageSize": "200px",
+				"contentGap": "8px"
+			}
+		},
+		"spacing": {
+			"borderRadius": "8px",
+			"badgeOffset": "8px",
+			"gridWidth": "220px",
+			"gridImageHeight": "160px",
+			"listImageSize": "200px",
+			"contentGap": "8px"
+		},
+		"color": {
+			"outOfStock": "#D32F2F"
+		},
+		"semantic": {
+			"surface": "#FFFFFF",
+			"border": "rgba(0, 0, 0, 0.1)",
+			"text": {
+				"primary": "#000000",
+				"secondary": "#333333"
+			},
+			"stock": {
+				"inStock": "#128C7E",
+				"outOfStock": "#D32F2F"
+			},
+			"spacing": {
+				"borderRadius": "8px",
+				"badgeOffset": "8px",
+				"gridWidth": "220px",
+				"gridImageHeight": "160px",
+				"listImageSize": "200px",
+				"contentGap": "8px"
+			}
+		}
+	},
 	"typography": {
 		"h1": {
 			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",

@@ -1,0 +1,24 @@
+{
+	"productCard": {
+		"component": {
+			"surface": { "$type": "color", "$value": "{productCard.semantic.surface}" },
+			"border":  { "$type": "color", "$value": "{productCard.semantic.border}" },
+			"text": {
+				"primary":   { "$type": "color", "$value": "{productCard.semantic.text.primary}" },
+				"secondary": { "$type": "color", "$value": "{productCard.semantic.text.secondary}" }
+			},
+			"stock": {
+				"inStock":    { "$type": "color", "$value": "{productCard.semantic.stock.inStock}" },
+				"outOfStock": { "$type": "color", "$value": "{productCard.semantic.stock.outOfStock}" }
+			},
+			"spacing": {
+				"borderRadius":    { "$type": "dimension", "$value": "{productCard.semantic.spacing.borderRadius}" },
+				"badgeOffset":     { "$type": "dimension", "$value": "{productCard.semantic.spacing.badgeOffset}" },
+				"gridWidth":       { "$type": "dimension", "$value": "{productCard.semantic.spacing.gridWidth}" },
+				"gridImageHeight": { "$type": "dimension", "$value": "{productCard.semantic.spacing.gridImageHeight}" },
+				"listImageSize":   { "$type": "dimension", "$value": "{productCard.semantic.spacing.listImageSize}" },
+				"contentGap":      { "$type": "dimension", "$value": "{productCard.semantic.spacing.contentGap}" }
+			}
+		}
+	}
+}
