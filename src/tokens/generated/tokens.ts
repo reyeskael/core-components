@@ -230,6 +230,58 @@ export const tokens = {
 			}
 		}
 	},
+	"footer": {
+		"component": {
+			"background": "#FFFFFF",
+			"border": "rgba(0, 0, 0, 0.1)",
+			"text": {
+				"primary": "#000000",
+				"secondary": "#333333"
+			},
+			"link": {
+				"default": "#128C7E",
+				"hover": "#17B3A1"
+			},
+			"bottomBar": {
+				"background": "#0E6E63",
+				"text": "#FFFFFF"
+			},
+			"padding": {
+				"sectionY": "48px",
+				"sectionX": "24px",
+				"bottomBarY": "16px",
+				"groupGap": "12px"
+			}
+		},
+		"spacing": {
+			"sectionPaddingY": "48px",
+			"sectionPaddingX": "24px",
+			"bottomBarPaddingY": "16px",
+			"groupGap": "12px"
+		},
+		"semantic": {
+			"surface": {
+				"main": "#FFFFFF",
+				"bottomBar": "#0E6E63"
+			},
+			"text": {
+				"primary": "#000000",
+				"secondary": "#333333",
+				"onDark": "#FFFFFF"
+			},
+			"link": {
+				"default": "#128C7E",
+				"hover": "#17B3A1"
+			},
+			"border": "rgba(0, 0, 0, 0.1)",
+			"padding": {
+				"sectionY": "48px",
+				"sectionX": "24px",
+				"bottomBarY": "16px",
+				"groupGap": "12px"
+			}
+		}
+	},
 	"header": {
 		"background": "#FFFFFF",
 		"paddingX": "20px",

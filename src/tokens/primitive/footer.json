@@ -1,0 +1,10 @@
+{
+	"footer": {
+		"spacing": {
+			"sectionPaddingY":  { "$type": "dimension", "$value": "48px" },
+			"sectionPaddingX":  { "$type": "dimension", "$value": "24px" },
+			"bottomBarPaddingY": { "$type": "dimension", "$value": "16px" },
+			"groupGap":         { "$type": "dimension", "$value": "12px" }
+		}
+	}
+}

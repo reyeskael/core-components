@@ -1,0 +1,286 @@
+## Footer Component
+
+The Footer component is a configurable, multi-column page footer built from MUI primitives. It supports contact info with social icons, dynamic link groups, a newsletter signup form, a bottom bar with copyright text, and optional payment method badges.
+
+## Overview
+
+Every section is opt-in — render only what you pass. Link groups are driven by an array so any number of columns can be added without changing the component. The newsletter section manages its own email/checkbox state internally and surfaces results via the `onSubscribe` callback.
+
+[📖 View Footer Storybook](?path=/docs/stories-footer--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>logoUrl</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>URL of the logo image shown centred above the main columns</td>
+		</tr>
+		<tr>
+			<td><code>logoAlt</code></td>
+			<td><code>string</code></td>
+			<td><code>"Logo"</code></td>
+			<td>Alt text for the logo image</td>
+		</tr>
+		<tr>
+			<td><code>contactInfo</code></td>
+			<td><code>FooterContactItem[]</code></td>
+			<td><code>undefined</code></td>
+			<td>List of contact/social items displayed in the left column with icons</td>
+		</tr>
+		<tr>
+			<td><code>linkGroups</code></td>
+			<td><code>FooterLinkGroup[]</code></td>
+			<td><code>[]</code></td>
+			<td>Array of titled link columns rendered in the middle section</td>
+		</tr>
+		<tr>
+			<td><code>newsletter</code></td>
+			<td><code>FooterNewsletterConfig</code></td>
+			<td><code>undefined</code></td>
+			<td>Newsletter signup config; when provided adds an email input + privacy checkbox column</td>
+		</tr>
+		<tr>
+			<td><code>copyright</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Copyright text shown in the bottom bar</td>
+		</tr>
+		<tr>
+			<td><code>paymentMethods</code></td>
+			<td><code>Array&lt;"visa" | "mastercard" | "paypal"&gt;</code></td>
+			<td><code>undefined</code></td>
+			<td>Payment method badges shown on the right of the bottom bar</td>
+		</tr>
+		<tr>
+			<td><code>tokens</code></td>
+			<td><code>Tokens</code></td>
+			<td>Generated tokens</td>
+			<td>Override the token set for multi-brand theming</td>
+		</tr>
+	</tbody>
+</table>
+
+### FooterContactItem
+
+<table>
+	<thead>
+		<tr>
+			<th>Field</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>type</code></td>
+			<td><code>"location" | "instagram" | "twitter" | "facebook" | "email" | "phone"</code></td>
+			<td>Determines which MUI icon is shown</td>
+		</tr>
+		<tr>
+			<td><code>label</code></td>
+			<td><code>string</code></td>
+			<td>Display text</td>
+		</tr>
+		<tr>
+			<td><code>href</code></td>
+			<td><code>string</code></td>
+			<td>Optional link URL; when absent the item renders as plain text</td>
+		</tr>
+	</tbody>
+</table>
+
+### FooterLinkGroup
+
+<table>
+	<thead>
+		<tr>
+			<th>Field</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>title</code></td>
+			<td><code>string</code></td>
+			<td>Bold column heading</td>
+		</tr>
+		<tr>
+			<td><code>links</code></td>
+			<td><code>Array&lt;&#123; label: string; href: string &#125;&gt;</code></td>
+			<td>Navigation links rendered with a chevron prefix</td>
+		</tr>
+	</tbody>
+</table>
+
+### FooterNewsletterConfig
+
+<table>
+	<thead>
+		<tr>
+			<th>Field</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>onSubscribe</code></td>
+			<td><code>(email: string) => void</code></td>
+			<td>—</td>
+			<td>Called with the email value when the Send button is clicked</td>
+		</tr>
+		<tr>
+			<td><code>title</code></td>
+			<td><code>string</code></td>
+			<td><code>"Newsletter"</code></td>
+			<td>Section heading</td>
+		</tr>
+		<tr>
+			<td><code>description</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Subtitle text shown below the heading</td>
+		</tr>
+		<tr>
+			<td><code>placeholder</code></td>
+			<td><code>string</code></td>
+			<td><code>"Your email"</code></td>
+			<td>Email input placeholder</td>
+		</tr>
+		<tr>
+			<td><code>buttonLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>"Send"</code></td>
+			<td>Submit button label</td>
+		</tr>
+		<tr>
+			<td><code>privacyPolicyUrl</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>When provided, shows a privacy policy checkbox above the button</td>
+		</tr>
+		<tr>
+			<td><code>privacyPolicyLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>"Privacy Policy"</code></td>
+			<td>Link label for the privacy policy URL</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+Footer styles flow through three token tiers. Because Footer is a composite component with no single MUI counterpart, the resolved values are consumed directly via the <code>footerStyles(tokens)</code> helper rather than through a global MUI component override.
+
+### Surface & text
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>footer.component.background</code></td>
+			<td>Main section background color</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.border</code></td>
+			<td>Divider line between logo and content</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.text.primary</code></td>
+			<td>Column headings and primary text</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.text.secondary</code></td>
+			<td>Contact item text and descriptions</td>
+		</tr>
+	</tbody>
+</table>
+
+### Links
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>footer.component.link.default</code></td>
+			<td>Link color at rest</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.link.hover</code></td>
+			<td>Link color on hover</td>
+		</tr>
+	</tbody>
+</table>
+
+### Bottom bar
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>footer.component.bottomBar.background</code></td>
+			<td>Dark bottom strip background</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.bottomBar.text</code></td>
+			<td>Copyright text and payment badge text color</td>
+		</tr>
+	</tbody>
+</table>
+
+### Spacing
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>footer.component.padding.sectionY</code></td>
+			<td>Vertical padding of the main content section</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.padding.sectionX</code></td>
+			<td>Horizontal padding of the main content section</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.padding.bottomBarY</code></td>
+			<td>Vertical padding of the bottom bar</td>
+		</tr>
+		<tr>
+			<td><code>footer.component.padding.groupGap</code></td>
+			<td>Gap between items within a link group</td>
+		</tr>
+	</tbody>
+</table>
