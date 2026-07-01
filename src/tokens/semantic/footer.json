@@ -1,0 +1,26 @@
+{
+	"footer": {
+		"semantic": {
+			"surface": {
+				"main":    { "$type": "color", "$value": "{color.surface.default}" },
+				"bottomBar": { "$type": "color", "$value": "{color.green.600}" }
+			},
+			"text": {
+				"primary":   { "$type": "color", "$value": "{color.text.primary}" },
+				"secondary": { "$type": "color", "$value": "{color.text.secondary}" },
+				"onDark":    { "$type": "color", "$value": "{color.white}" }
+			},
+			"link": {
+				"default": { "$type": "color", "$value": "{color.action.primary.default}" },
+				"hover":   { "$type": "color", "$value": "{color.action.primary.hover}" }
+			},
+			"border": { "$type": "color", "$value": "{color.border.divider}" },
+			"padding": {
+				"sectionY":   { "$type": "dimension", "$value": "{footer.spacing.sectionPaddingY}" },
+				"sectionX":   { "$type": "dimension", "$value": "{footer.spacing.sectionPaddingX}" },
+				"bottomBarY": { "$type": "dimension", "$value": "{footer.spacing.bottomBarPaddingY}" },
+				"groupGap":   { "$type": "dimension", "$value": "{footer.spacing.groupGap}" }
+			}
+		}
+	}
+}
