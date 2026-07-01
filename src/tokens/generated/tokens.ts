@@ -146,6 +146,98 @@ export const tokens = {
 			}
 		}
 	},
+	"carouselBanner": {
+		"component": {
+			"surface": "#000000",
+			"overlay": "rgba(0, 0, 0, 0.45)",
+			"text": {
+				"primary": "#FFFFFF",
+				"secondary": "#E0E0E0"
+			},
+			"arrow": {
+				"background": "rgba(255, 255, 255, 0.8)",
+				"backgroundHover": "#FFFFFF",
+				"icon": "#000000"
+			},
+			"dot": {
+				"default": "rgba(255, 255, 255, 0.5)",
+				"active": "#FFFFFF"
+			},
+			"spacing": {
+				"height": "400px",
+				"borderRadius": "0px",
+				"arrowOffset": "16px",
+				"dotOffset": "16px",
+				"dotSize": "10px",
+				"dotGap": "8px",
+				"contentPaddingX": "32px",
+				"contentPaddingY": "24px"
+			},
+			"timing": {
+				"autoplayInterval": 5000
+			}
+		},
+		"color": {
+			"surface": "#000000",
+			"overlay": "rgba(0, 0, 0, 0.45)",
+			"text": {
+				"primary": "#FFFFFF",
+				"secondary": "#E0E0E0"
+			},
+			"arrow": {
+				"background": "rgba(255, 255, 255, 0.8)",
+				"backgroundHover": "#FFFFFF",
+				"icon": "#000000"
+			},
+			"dot": {
+				"default": "rgba(255, 255, 255, 0.5)",
+				"active": "#FFFFFF"
+			}
+		},
+		"spacing": {
+			"height": "400px",
+			"borderRadius": "0px",
+			"arrowOffset": "16px",
+			"dotOffset": "16px",
+			"dotSize": "10px",
+			"dotGap": "8px",
+			"contentPaddingX": "32px",
+			"contentPaddingY": "24px"
+		},
+		"timing": {
+			"autoplayInterval": 5000
+		},
+		"semantic": {
+			"surface": "#000000",
+			"overlay": "rgba(0, 0, 0, 0.45)",
+			"text": {
+				"primary": "#FFFFFF",
+				"secondary": "#E0E0E0"
+			},
+			"arrow": {
+				"background": "rgba(255, 255, 255, 0.8)",
+				"backgroundHover": "#FFFFFF",
+				"icon": "#000000"
+			},
+			"dot": {
+				"default": "rgba(255, 255, 255, 0.5)",
+				"active": "#FFFFFF"
+			},
+			"spacing": {
+				"height": "400px",
+				"borderRadius": "0px",
+				"arrowOffset": "16px",
+				"dotOffset": "16px",
+				"dotSize": "10px",
+				"dotGap": "8px",
+				"contentPaddingX": "32px",
+				"contentPaddingY": "24px"
+			},
+			"timing": {
+				"autoplayInterval": 5000
+			}
+		}
+	},
 	"chip": {
 		"filled": {
 			"default": {

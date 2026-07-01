@@ -1,0 +1,34 @@
+{
+	"carouselBanner": {
+		"color": {
+			"surface": { "$type": "color", "$value": "#000000" },
+			"overlay": { "$type": "color", "$value": "rgba(0, 0, 0, 0.45)" },
+			"text": {
+				"primary": { "$type": "color", "$value": "#FFFFFF" },
+				"secondary": { "$type": "color", "$value": "#E0E0E0" }
+			},
+			"arrow": {
+				"background": { "$type": "color", "$value": "rgba(255, 255, 255, 0.8)" },
+				"backgroundHover": { "$type": "color", "$value": "#FFFFFF" },
+				"icon": { "$type": "color", "$value": "#000000" }
+			},
+			"dot": {
+				"default": { "$type": "color", "$value": "rgba(255, 255, 255, 0.5)" },
+				"active": { "$type": "color", "$value": "#FFFFFF" }
+			}
+		},
+		"spacing": {
+			"height": { "$type": "dimension", "$value": "400px" },
+			"borderRadius": { "$type": "dimension", "$value": "0px" },
+			"arrowOffset": { "$type": "dimension", "$value": "16px" },
+			"dotOffset": { "$type": "dimension", "$value": "16px" },
+			"dotSize": { "$type": "dimension", "$value": "10px" },
+			"dotGap": { "$type": "dimension", "$value": "8px" },
+			"contentPaddingX": { "$type": "dimension", "$value": "32px" },
+			"contentPaddingY": { "$type": "dimension", "$value": "24px" }
+		},
+		"timing": {
+			"autoplayInterval": { "$type": "number", "$value": 5000 }
+		}
+	}
+}

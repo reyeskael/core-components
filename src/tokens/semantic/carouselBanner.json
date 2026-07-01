@@ -1,0 +1,34 @@
+{
+	"carouselBanner": {
+		"semantic": {
+			"surface": { "$type": "color", "$value": "{carouselBanner.color.surface}" },
+			"overlay": { "$type": "color", "$value": "{carouselBanner.color.overlay}" },
+			"text": {
+				"primary": { "$type": "color", "$value": "{carouselBanner.color.text.primary}" },
+				"secondary": { "$type": "color", "$value": "{carouselBanner.color.text.secondary}" }
+			},
+			"arrow": {
+				"background": { "$type": "color", "$value": "{carouselBanner.color.arrow.background}" },
+				"backgroundHover": { "$type": "color", "$value": "{carouselBanner.color.arrow.backgroundHover}" },
+				"icon": { "$type": "color", "$value": "{carouselBanner.color.arrow.icon}" }
+			},
+			"dot": {
+				"default": { "$type": "color", "$value": "{carouselBanner.color.dot.default}" },
+				"active": { "$type": "color", "$value": "{carouselBanner.color.dot.active}" }
+			},
+			"spacing": {
+				"height": { "$type": "dimension", "$value": "{carouselBanner.spacing.height}" },
+				"borderRadius": { "$type": "dimension", "$value": "{carouselBanner.spacing.borderRadius}" },
+				"arrowOffset": { "$type": "dimension", "$value": "{carouselBanner.spacing.arrowOffset}" },
+				"dotOffset": { "$type": "dimension", "$value": "{carouselBanner.spacing.dotOffset}" },
+				"dotSize": { "$type": "dimension", "$value": "{carouselBanner.spacing.dotSize}" },
+				"dotGap": { "$type": "dimension", "$value": "{carouselBanner.spacing.dotGap}" },
+				"contentPaddingX": { "$type": "dimension", "$value": "{carouselBanner.spacing.contentPaddingX}" },
+				"contentPaddingY": { "$type": "dimension", "$value": "{carouselBanner.spacing.contentPaddingY}" }
+			},
+			"timing": {
+				"autoplayInterval": { "$type": "number", "$value": "{carouselBanner.timing.autoplayInterval}" }
+			}
+		}
+	}
+}

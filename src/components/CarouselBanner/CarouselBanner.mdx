@@ -1,0 +1,220 @@
+## CarouselBanner Component
+
+The CarouselBanner component is a composite hero/banner carousel built from MUI primitives. It rotates through a list of full-bleed images, each with an optional title, subtitle, and call-to-action button.
+
+## Overview
+
+Use CarouselBanner at the top of a page to showcase promotions, featured content, or announcements. Navigation arrows and dot indicators can each be toggled independently, and slides can advance automatically on a timer — autoplay pauses while the user hovers over the banner. The component holds only its own slide-index state; slide content and click behavior are fully controlled via the `slides` prop.
+
+[📖 View CarouselBanner Storybook](?path=/docs/stories-carouselbanner--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>slides</code></td>
+			<td><code>CarouselBannerSlide[]</code></td>
+			<td>—</td>
+			<td>Slides to render; see shape below</td>
+		</tr>
+		<tr>
+			<td><code>showArrows</code></td>
+			<td><code>boolean</code></td>
+			<td><code>true</code></td>
+			<td>Whether to render the previous/next arrow buttons</td>
+		</tr>
+		<tr>
+			<td><code>showDots</code></td>
+			<td><code>boolean</code></td>
+			<td><code>true</code></td>
+			<td>Whether to render the clickable dot indicators</td>
+		</tr>
+		<tr>
+			<td><code>autoplay</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Automatically advances to the next slide; pauses on hover</td>
+		</tr>
+		<tr>
+			<td><code>autoplayInterval</code></td>
+			<td><code>number</code></td>
+			<td><code>5000</code></td>
+			<td>Milliseconds between automatic slide changes</td>
+		</tr>
+	</tbody>
+</table>
+
+### CarouselBannerSlide
+
+<table>
+	<thead>
+		<tr>
+			<th>Field</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>imageUrl</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>URL of the slide's image</td>
+		</tr>
+		<tr>
+			<td><code>imageAlt</code></td>
+			<td><code>string</code></td>
+			<td><code>''</code></td>
+			<td>Alt text for the slide's image</td>
+		</tr>
+		<tr>
+			<td><code>title</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Headline rendered over the image</td>
+		</tr>
+		<tr>
+			<td><code>subtitle</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Supporting text rendered under the title</td>
+		</tr>
+		<tr>
+			<td><code>ctaLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>When provided, renders a call-to-action button</td>
+		</tr>
+		<tr>
+			<td><code>onCtaClick</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Called when the call-to-action button is pressed</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+CarouselBanner is a composite component with no single MUI counterpart, so its tokens resolve to a plain style object (via <code>carouselBannerStyles</code>) consumed through <code>sx</code> props rather than a registered <code>MuiCarouselBanner</code> override.
+
+### Surface & text
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>carouselBanner.component.surface</code></td>
+			<td>Background color shown while an image loads</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.overlay</code></td>
+			<td>Background color of the caption bar behind the title/subtitle/CTA</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.text.primary</code></td>
+			<td>Title text color</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.text.secondary</code></td>
+			<td>Subtitle text color</td>
+		</tr>
+	</tbody>
+</table>
+
+### Arrows & dots
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>carouselBanner.component.arrow.background</code></td>
+			<td>Arrow button background color — resting</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.arrow.backgroundHover</code></td>
+			<td>Arrow button background color — hover</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.arrow.icon</code></td>
+			<td>Arrow icon color</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.dot.default</code></td>
+			<td>Dot indicator color for inactive slides</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.dot.active</code></td>
+			<td>Dot indicator color for the current slide</td>
+		</tr>
+	</tbody>
+</table>
+
+### Spacing & timing
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>carouselBanner.component.spacing.height</code></td>
+			<td>Banner height</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.borderRadius</code></td>
+			<td>Banner corner radius</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.arrowOffset</code></td>
+			<td>Distance of the arrow buttons from the banner edges</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.dotOffset</code></td>
+			<td>Distance of the dot indicators from the bottom edge</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.dotSize</code></td>
+			<td>Diameter of each dot indicator</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.dotGap</code></td>
+			<td>Gap between dot indicators</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.contentPaddingX</code></td>
+			<td>Horizontal padding of the caption bar</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.spacing.contentPaddingY</code></td>
+			<td>Vertical padding of the caption bar</td>
+		</tr>
+		<tr>
+			<td><code>carouselBanner.component.timing.autoplayInterval</code></td>
+			<td>Default milliseconds between automatic slide changes</td>
+		</tr>
+	</tbody>
+</table>
