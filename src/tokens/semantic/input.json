@@ -1,0 +1,55 @@
+{
+	"input": {
+		"semantic": {
+			"outlined": {
+				"border": {
+					"default": { "$type": "color", "$value": "{input.color.border.default}" },
+					"hover": { "$type": "color", "$value": "{input.color.border.hover}" },
+					"focused": { "$type": "color", "$value": "{input.color.border.focused}" },
+					"error": { "$type": "color", "$value": "{input.color.border.error}" },
+					"warning": { "$type": "color", "$value": "{input.color.border.warning}" },
+					"disabled": { "$type": "color", "$value": "{input.color.border.disabled}" }
+				}
+			},
+			"filled": {
+				"background": {
+					"default": { "$type": "color", "$value": "{input.color.background.default}" },
+					"hover": { "$type": "color", "$value": "{input.color.background.hover}" },
+					"disabled": { "$type": "color", "$value": "{input.color.background.disabled}" }
+				},
+				"underline": {
+					"default": { "$type": "color", "$value": "{input.color.border.default}" },
+					"hover": { "$type": "color", "$value": "{input.color.border.hover}" },
+					"focused": { "$type": "color", "$value": "{input.color.border.focused}" },
+					"error": { "$type": "color", "$value": "{input.color.border.error}" },
+					"warning": { "$type": "color", "$value": "{input.color.border.warning}" }
+				}
+			},
+			"standard": {
+				"underline": {
+					"default": { "$type": "color", "$value": "{input.color.border.default}" },
+					"hover": { "$type": "color", "$value": "{input.color.border.hover}" },
+					"focused": { "$type": "color", "$value": "{input.color.border.focused}" },
+					"error": { "$type": "color", "$value": "{input.color.border.error}" },
+					"warning": { "$type": "color", "$value": "{input.color.border.warning}" }
+				}
+			},
+			"label": {
+				"default": { "$type": "color", "$value": "{input.color.label.default}" },
+				"focused": { "$type": "color", "$value": "{input.color.label.focused}" },
+				"error": { "$type": "color", "$value": "{input.color.label.error}" },
+				"warning": { "$type": "color", "$value": "{input.color.label.warning}" },
+				"disabled": { "$type": "color", "$value": "{input.color.label.disabled}" }
+			},
+			"helperText": {
+				"default": { "$type": "color", "$value": "{input.color.helperText.default}" },
+				"error": { "$type": "color", "$value": "{input.color.helperText.error}" },
+				"warning": { "$type": "color", "$value": "{input.color.helperText.warning}" }
+			},
+			"text": {
+				"default": { "$type": "color", "$value": "{input.color.text.default}" },
+				"disabled": { "$type": "color", "$value": "{input.color.text.disabled}" }
+			}
+		}
+	}
+}

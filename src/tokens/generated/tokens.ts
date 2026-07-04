@@ -444,6 +444,140 @@ export const tokens = {
 			"color": "#333333"
 		}
 	},
+	"input": {
+		"outlined": {
+			"border": {
+				"default": "#BDBDBD",
+				"hover": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02",
+				"disabled": "#E0E0E0"
+			}
+		},
+		"filled": {
+			"background": {
+				"default": "#F5F5F5",
+				"hover": "#EEEEEE",
+				"disabled": "#F5F5F5"
+			},
+			"underline": {
+				"default": "#BDBDBD",
+				"hover": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02"
+			}
+		},
+		"standard": {
+			"underline": {
+				"default": "#BDBDBD",
+				"hover": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02"
+			}
+		},
+		"label": {
+			"default": "#757575",
+			"focused": "#128C7E",
+			"error": "#D32F2F",
+			"warning": "#ED6C02",
+			"disabled": "#BDBDBD"
+		},
+		"helperText": {
+			"default": "#757575",
+			"error": "#D32F2F",
+			"warning": "#ED6C02"
+		},
+		"text": {
+			"default": "#000000",
+			"disabled": "#9E9E9E"
+		},
+		"color": {
+			"border": {
+				"default": "#BDBDBD",
+				"hover": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02",
+				"disabled": "#E0E0E0"
+			},
+			"background": {
+				"default": "#F5F5F5",
+				"hover": "#EEEEEE",
+				"disabled": "#F5F5F5"
+			},
+			"text": {
+				"default": "#000000",
+				"disabled": "#9E9E9E"
+			},
+			"label": {
+				"default": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02",
+				"disabled": "#BDBDBD"
+			},
+			"helperText": {
+				"default": "#757575",
+				"error": "#D32F2F",
+				"warning": "#ED6C02"
+			}
+		},
+		"borderRadius": "4px",
+		"semantic": {
+			"outlined": {
+				"border": {
+					"default": "#BDBDBD",
+					"hover": "#757575",
+					"focused": "#128C7E",
+					"error": "#D32F2F",
+					"warning": "#ED6C02",
+					"disabled": "#E0E0E0"
+				}
+			},
+			"filled": {
+				"background": {
+					"default": "#F5F5F5",
+					"hover": "#EEEEEE",
+					"disabled": "#F5F5F5"
+				},
+				"underline": {
+					"default": "#BDBDBD",
+					"hover": "#757575",
+					"focused": "#128C7E",
+					"error": "#D32F2F",
+					"warning": "#ED6C02"
+				}
+			},
+			"standard": {
+				"underline": {
+					"default": "#BDBDBD",
+					"hover": "#757575",
+					"focused": "#128C7E",
+					"error": "#D32F2F",
+					"warning": "#ED6C02"
+				}
+			},
+			"label": {
+				"default": "#757575",
+				"focused": "#128C7E",
+				"error": "#D32F2F",
+				"warning": "#ED6C02",
+				"disabled": "#BDBDBD"
+			},
+			"helperText": {
+				"default": "#757575",
+				"error": "#D32F2F",
+				"warning": "#ED6C02"
+			},
+			"text": {
+				"default": "#000000",
+				"disabled": "#9E9E9E"
+			}
+		}
+	},
 	"productCard": {
 		"component": {
 			"surface": "#FFFFFF",

@@ -1,0 +1,53 @@
+{
+	"input": {
+		"outlined": {
+			"border": {
+				"default": { "$type": "color", "$value": "{input.semantic.outlined.border.default}" },
+				"hover": { "$type": "color", "$value": "{input.semantic.outlined.border.hover}" },
+				"focused": { "$type": "color", "$value": "{input.semantic.outlined.border.focused}" },
+				"error": { "$type": "color", "$value": "{input.semantic.outlined.border.error}" },
+				"warning": { "$type": "color", "$value": "{input.semantic.outlined.border.warning}" },
+				"disabled": { "$type": "color", "$value": "{input.semantic.outlined.border.disabled}" }
+			}
+		},
+		"filled": {
+			"background": {
+				"default": { "$type": "color", "$value": "{input.semantic.filled.background.default}" },
+				"hover": { "$type": "color", "$value": "{input.semantic.filled.background.hover}" },
+				"disabled": { "$type": "color", "$value": "{input.semantic.filled.background.disabled}" }
+			},
+			"underline": {
+				"default": { "$type": "color", "$value": "{input.semantic.filled.underline.default}" },
+				"hover": { "$type": "color", "$value": "{input.semantic.filled.underline.hover}" },
+				"focused": { "$type": "color", "$value": "{input.semantic.filled.underline.focused}" },
+				"error": { "$type": "color", "$value": "{input.semantic.filled.underline.error}" },
+				"warning": { "$type": "color", "$value": "{input.semantic.filled.underline.warning}" }
+			}
+		},
+		"standard": {
+			"underline": {
+				"default": { "$type": "color", "$value": "{input.semantic.standard.underline.default}" },
+				"hover": { "$type": "color", "$value": "{input.semantic.standard.underline.hover}" },
+				"focused": { "$type": "color", "$value": "{input.semantic.standard.underline.focused}" },
+				"error": { "$type": "color", "$value": "{input.semantic.standard.underline.error}" },
+				"warning": { "$type": "color", "$value": "{input.semantic.standard.underline.warning}" }
+			}
+		},
+		"label": {
+			"default": { "$type": "color", "$value": "{input.semantic.label.default}" },
+			"focused": { "$type": "color", "$value": "{input.semantic.label.focused}" },
+			"error": { "$type": "color", "$value": "{input.semantic.label.error}" },
+			"warning": { "$type": "color", "$value": "{input.semantic.label.warning}" },
+			"disabled": { "$type": "color", "$value": "{input.semantic.label.disabled}" }
+		},
+		"helperText": {
+			"default": { "$type": "color", "$value": "{input.semantic.helperText.default}" },
+			"error": { "$type": "color", "$value": "{input.semantic.helperText.error}" },
+			"warning": { "$type": "color", "$value": "{input.semantic.helperText.warning}" }
+		},
+		"text": {
+			"default": { "$type": "color", "$value": "{input.semantic.text.default}" },
+			"disabled": { "$type": "color", "$value": "{input.semantic.text.disabled}" }
+		}
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"input": {
+		"color": {
+			"border": {
+				"default": { "$type": "color", "$value": "#BDBDBD" },
+				"hover": { "$type": "color", "$value": "#757575" },
+				"focused": { "$type": "color", "$value": "#128C7E" },
+				"error": { "$type": "color", "$value": "#D32F2F" },
+				"warning": { "$type": "color", "$value": "#ED6C02" },
+				"disabled": { "$type": "color", "$value": "#E0E0E0" }
+			},
+			"background": {
+				"default": { "$type": "color", "$value": "#F5F5F5" },
+				"hover": { "$type": "color", "$value": "#EEEEEE" },
+				"disabled": { "$type": "color", "$value": "#F5F5F5" }
+			},
+			"text": {
+				"default": { "$type": "color", "$value": "#000000" },
+				"disabled": { "$type": "color", "$value": "#9E9E9E" }
+			},
+			"label": {
+				"default": { "$type": "color", "$value": "#757575" },
+				"focused": { "$type": "color", "$value": "#128C7E" },
+				"error": { "$type": "color", "$value": "#D32F2F" },
+				"warning": { "$type": "color", "$value": "#ED6C02" },
+				"disabled": { "$type": "color", "$value": "#BDBDBD" }
+			},
+			"helperText": {
+				"default": { "$type": "color", "$value": "#757575" },
+				"error": { "$type": "color", "$value": "#D32F2F" },
+				"warning": { "$type": "color", "$value": "#ED6C02" }
+			}
+		},
+		"borderRadius": { "$type": "dimension", "$value": "4px" }
+	}
+}

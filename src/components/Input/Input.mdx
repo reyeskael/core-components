@@ -1,0 +1,280 @@
+## Input Component
+
+The Input component is a fundamental UI element built on top of Material-UI's TextField, providing a consistent interface for text entry across the application.
+
+## Overview
+
+Inputs collect text from the user in forms and search fields. They come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states.
+
+[📖 View Input Storybook](?path=/docs/stories-input--docs)
+
+## Props
+
+The Input component accepts all standard Material-UI TextField props:
+
+<table>
+	<thead>
+		<tr>
+			<th>Props</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>variant</code></td>
+			<td>`outlined` | `filled` | `standard`</td>
+			<td>`outlined`</td>
+			<td>The style variant</td>
+		</tr>
+		<tr>
+			<td><code>label</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Label displayed above/inside the input</td>
+		</tr>
+		<tr>
+			<td><code>placeholder</code></td>
+			<td><code>string</code></td>
+			<td><code>undefined</code></td>
+			<td>Placeholder text shown when the input is empty</td>
+		</tr>
+		<tr>
+			<td><code>helperText</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Text displayed below the input</td>
+		</tr>
+		<tr>
+			<td><code>error</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the input is in an error state</td>
+		</tr>
+		<tr>
+			<td><code>warning</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the input is in a warning state (non-blocking validation) — same visual treatment as <code>error</code>, applied to the border/underline, label, and helper text</td>
+		</tr>
+		<tr>
+			<td><code>disabled</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the input is disabled</td>
+		</tr>
+		<tr>
+			<td><code>required</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the input is marked as required</td>
+		</tr>
+		<tr>
+			<td><code>fullWidth</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the input takes full width of container</td>
+		</tr>
+		<tr>
+			<td><code>size</code></td>
+			<td>`small` | `medium`</td>
+			<td>`medium`</td>
+			<td>The input size</td>
+		</tr>
+		<tr>
+			<td><code>value</code></td>
+			<td><code>unknown</code></td>
+			<td><code>undefined</code></td>
+			<td>The controlled value of the input</td>
+		</tr>
+		<tr>
+			<td><code>defaultValue</code></td>
+			<td><code>unknown</code></td>
+			<td><code>undefined</code></td>
+			<td>The uncontrolled default value of the input</td>
+		</tr>
+		<tr>
+			<td><code>onChange</code></td>
+			<td><code>(event: ChangeEvent) => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback function when the input value changes</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/text-field/" target="_blank" rel="noopener noreferrer">Material-UI TextField documentation</a>.
+
+## Design tokens
+
+Input styles are driven by three tiers of tokens. Each variant maps to its own border/underline/background tokens per interaction state, with label, helper text, and value text colors shared across all variants.
+
+The `warning` state has no native MUI severity, so it isn't driven by a `Mui-*` state class like `error` is — the `Input` component applies an `Input-warning` class to the TextField's root when the `warning` prop is set, and the theme overrides key off that class instead.
+
+### Outlined
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>input.outlined.border.default</code></td>
+			<td>Border color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.outlined.border.hover</code></td>
+			<td>Border color — hover</td>
+		</tr>
+		<tr>
+			<td><code>input.outlined.border.focused</code></td>
+			<td>Border color — focused</td>
+		</tr>
+		<tr>
+			<td><code>input.outlined.border.error</code></td>
+			<td>Border color — error</td>
+		</tr>
+		<tr>
+			<td><code>input.outlined.border.warning</code></td>
+			<td>Border color — warning</td>
+		</tr>
+		<tr>
+			<td><code>input.outlined.border.disabled</code></td>
+			<td>Border color — disabled</td>
+		</tr>
+	</tbody>
+</table>
+
+### Filled
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>input.filled.background.default</code></td>
+			<td>Background fill — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.background.hover</code></td>
+			<td>Background fill — hover</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.background.disabled</code></td>
+			<td>Background fill — disabled</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.underline.default</code></td>
+			<td>Underline color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.underline.hover</code></td>
+			<td>Underline color — hover</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.underline.focused</code></td>
+			<td>Underline color — focused</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.underline.error</code></td>
+			<td>Underline color — error</td>
+		</tr>
+		<tr>
+			<td><code>input.filled.underline.warning</code></td>
+			<td>Underline color — warning</td>
+		</tr>
+	</tbody>
+</table>
+
+### Standard
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>input.standard.underline.default</code></td>
+			<td>Underline color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.standard.underline.hover</code></td>
+			<td>Underline color — hover</td>
+		</tr>
+		<tr>
+			<td><code>input.standard.underline.focused</code></td>
+			<td>Underline color — focused</td>
+		</tr>
+		<tr>
+			<td><code>input.standard.underline.error</code></td>
+			<td>Underline color — error</td>
+		</tr>
+		<tr>
+			<td><code>input.standard.underline.warning</code></td>
+			<td>Underline color — warning</td>
+		</tr>
+	</tbody>
+</table>
+
+### Label, helper text, and value
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>input.label.default</code></td>
+			<td>Label color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.label.focused</code></td>
+			<td>Label color — focused</td>
+		</tr>
+		<tr>
+			<td><code>input.label.error</code></td>
+			<td>Label color — error</td>
+		</tr>
+		<tr>
+			<td><code>input.label.warning</code></td>
+			<td>Label color — warning</td>
+		</tr>
+		<tr>
+			<td><code>input.label.disabled</code></td>
+			<td>Label color — disabled</td>
+		</tr>
+		<tr>
+			<td><code>input.helperText.default</code></td>
+			<td>Helper text color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.helperText.error</code></td>
+			<td>Helper text color — error</td>
+		</tr>
+		<tr>
+			<td><code>input.helperText.warning</code></td>
+			<td>Helper text color — warning</td>
+		</tr>
+		<tr>
+			<td><code>input.text.default</code></td>
+			<td>Entered value color — resting</td>
+		</tr>
+		<tr>
+			<td><code>input.text.disabled</code></td>
+			<td>Entered value color — disabled</td>
+		</tr>
+	</tbody>
+</table>

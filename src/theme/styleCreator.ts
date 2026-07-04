@@ -6,6 +6,7 @@ import { muiChip } from './components/chip';
 import { muiAccordion, muiAccordionSummary, muiAccordionDetails } from './components/accordion';
 import { muiAppBar, muiToolbar } from './components/header';
 import { muiTypography } from './components/typography';
+import { muiOutlinedInput, muiFilledInput, muiInput, muiInputLabel, muiFormHelperText } from './components/input';
 
 /**
  * Assembles MUI `ThemeOptions` from a token set.
@@ -31,6 +32,11 @@ export const createThemeFromTokens = (
 		MuiAccordionDetails: muiAccordionDetails(tokens),
 		MuiAppBar: muiAppBar(tokens),
 		MuiToolbar: muiToolbar(tokens),
+		MuiOutlinedInput: muiOutlinedInput(tokens),
+		MuiFilledInput: muiFilledInput(tokens),
+		MuiInput: muiInput(tokens),
+		MuiInputLabel: muiInputLabel(tokens),
+		MuiFormHelperText: muiFormHelperText(tokens),
 	},
 });
 
