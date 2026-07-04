@@ -1,0 +1,19 @@
+{
+	"dropdown": {
+		"color": {
+			"icon": {
+				"default": { "$type": "color", "$value": "#757575" },
+				"disabled": { "$type": "color", "$value": "#BDBDBD" }
+			},
+			"menu": {
+				"background": { "$type": "color", "$value": "#FFFFFF" },
+				"item": {
+					"hover": { "$type": "color", "$value": "#EEEEEE" },
+					"selected": { "$type": "color", "$value": "rgba(18, 140, 126, 0.12)" },
+					"selectedHover": { "$type": "color", "$value": "rgba(18, 140, 126, 0.20)" },
+					"disabled": { "$type": "color", "$value": "#9E9E9E" }
+				}
+			}
+		}
+	}
+}

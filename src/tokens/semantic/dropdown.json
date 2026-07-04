@@ -1,0 +1,19 @@
+{
+	"dropdown": {
+		"semantic": {
+			"icon": {
+				"default": { "$type": "color", "$value": "{dropdown.color.icon.default}" },
+				"disabled": { "$type": "color", "$value": "{dropdown.color.icon.disabled}" }
+			},
+			"menu": {
+				"background": { "$type": "color", "$value": "{dropdown.color.menu.background}" },
+				"item": {
+					"hover": { "$type": "color", "$value": "{dropdown.color.menu.item.hover}" },
+					"selected": { "$type": "color", "$value": "{dropdown.color.menu.item.selected}" },
+					"selectedHover": { "$type": "color", "$value": "{dropdown.color.menu.item.selectedHover}" },
+					"disabledText": { "$type": "color", "$value": "{dropdown.color.menu.item.disabled}" }
+				}
+			}
+		}
+	}
+}

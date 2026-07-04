@@ -1,0 +1,172 @@
+## Dropdown Component
+
+The Dropdown component is a select field built on top of Material-UI's TextField (in `select` mode), sharing the same visual language as [Input](?path=/docs/stories-input--docs) — the same border, background, label, and helper text treatment across states.
+
+## Overview
+
+Dropdowns let users choose one value from a fixed list of options. Like Input, they come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states. Pass `options` for a simple label/value list, or pass `MenuItem` elements directly as `children` for full control over each row.
+
+Because Dropdown renders through the same `OutlinedInput`/`FilledInput`/`Input` and `InputLabel`/`FormHelperText` slots as Input, the field itself always matches Input pixel-for-pixel. The only Dropdown-specific styling is the chevron icon and the options menu (background, hover, and selected states).
+
+[📖 View Dropdown Storybook](?path=/docs/stories-dropdown--docs)
+
+## Props
+
+The Dropdown component accepts all standard Material-UI TextField props (minus `select`, which is always on):
+
+<table>
+	<thead>
+		<tr>
+			<th>Props</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>variant</code></td>
+			<td>`outlined` | `filled` | `standard`</td>
+			<td>`outlined`</td>
+			<td>The style variant</td>
+		</tr>
+		<tr>
+			<td><code>options</code></td>
+			<td><code>{'{ label: ReactNode; value: string | number; disabled?: boolean }[]'}</code></td>
+			<td><code>undefined</code></td>
+			<td>Options rendered as menu items. Ignored if <code>children</code> is provided</td>
+		</tr>
+		<tr>
+			<td><code>children</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td><code>MenuItem</code> elements rendered inside the menu, for full control over each row</td>
+		</tr>
+		<tr>
+			<td><code>label</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Label displayed above/inside the field</td>
+		</tr>
+		<tr>
+			<td><code>helperText</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Text displayed below the field</td>
+		</tr>
+		<tr>
+			<td><code>error</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the field is in an error state</td>
+		</tr>
+		<tr>
+			<td><code>warning</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the field is in a warning state (non-blocking validation) — same visual treatment as <code>error</code>, applied to the border/underline, label, and helper text</td>
+		</tr>
+		<tr>
+			<td><code>disabled</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the field is disabled</td>
+		</tr>
+		<tr>
+			<td><code>required</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the field is marked as required</td>
+		</tr>
+		<tr>
+			<td><code>fullWidth</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether the field takes full width of container</td>
+		</tr>
+		<tr>
+			<td><code>size</code></td>
+			<td>`small` | `medium`</td>
+			<td>`medium`</td>
+			<td>The field size</td>
+		</tr>
+		<tr>
+			<td><code>value</code></td>
+			<td><code>unknown</code></td>
+			<td><code>undefined</code></td>
+			<td>The controlled selected value</td>
+		</tr>
+		<tr>
+			<td><code>defaultValue</code></td>
+			<td><code>unknown</code></td>
+			<td><code>undefined</code></td>
+			<td>The uncontrolled default selected value</td>
+		</tr>
+		<tr>
+			<td><code>onChange</code></td>
+			<td><code>(event: SelectChangeEvent) => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback function when the selected value changes</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/text-field/" target="_blank" rel="noopener noreferrer">Material-UI TextField documentation</a>.
+
+## Design tokens
+
+The field surface — border, background, label, and helper text — is driven entirely by the same <code>input.*</code> tokens documented in [Input](?path=/docs/stories-input--docs), since Dropdown renders through the same underlying MUI slots. Dropdown only introduces its own tokens for the two elements it adds on top: the chevron icon and the options menu.
+
+### Icon
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>dropdown.icon.default</code></td>
+			<td>Chevron icon color — resting</td>
+		</tr>
+		<tr>
+			<td><code>dropdown.icon.disabled</code></td>
+			<td>Chevron icon color — disabled</td>
+		</tr>
+	</tbody>
+</table>
+
+### Menu
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>dropdown.menu.background</code></td>
+			<td>Options menu background</td>
+		</tr>
+		<tr>
+			<td><code>dropdown.menu.item.hover</code></td>
+			<td>Option row background — hover</td>
+		</tr>
+		<tr>
+			<td><code>dropdown.menu.item.selected</code></td>
+			<td>Option row background — selected</td>
+		</tr>
+		<tr>
+			<td><code>dropdown.menu.item.selectedHover</code></td>
+			<td>Option row background — selected and hovered</td>
+		</tr>
+		<tr>
+			<td><code>dropdown.menu.item.disabledText</code></td>
+			<td>Option row text color — disabled</td>
+		</tr>
+	</tbody>
+</table>

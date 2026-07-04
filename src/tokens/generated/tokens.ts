@@ -377,6 +377,51 @@ export const tokens = {
 			}
 		}
 	},
+	"dropdown": {
+		"icon": {
+			"default": "#757575",
+			"disabled": "#BDBDBD"
+		},
+		"menu": {
+			"background": "#FFFFFF",
+			"item": {
+				"hover": "#EEEEEE",
+				"selected": "rgba(18, 140, 126, 0.12)",
+				"selectedHover": "rgba(18, 140, 126, 0.20)",
+				"disabledText": "#9E9E9E"
+			}
+		},
+		"color": {
+			"icon": {
+				"default": "#757575",
+				"disabled": "#BDBDBD"
+			},
+			"menu": {
+				"background": "#FFFFFF",
+				"item": {
+					"hover": "#EEEEEE",
+					"selected": "rgba(18, 140, 126, 0.12)",
+					"selectedHover": "rgba(18, 140, 126, 0.20)",
+					"disabled": "#9E9E9E"
+				}
+			}
+		},
+		"semantic": {
+			"icon": {
+				"default": "#757575",
+				"disabled": "#BDBDBD"
+			},
+			"menu": {
+				"background": "#FFFFFF",
+				"item": {
+					"hover": "#EEEEEE",
+					"selected": "rgba(18, 140, 126, 0.12)",
+					"selectedHover": "rgba(18, 140, 126, 0.20)",
+					"disabledText": "#9E9E9E"
+				}
+			}
+		}
+	},
 	"footer": {
 		"component": {
 			"background": "#FFFFFF",
