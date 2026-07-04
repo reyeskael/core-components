@@ -113,4 +113,44 @@ describe('Input', () => {
 			expect(input).toBeRequired();
 		});
 	});
+
+	describe('type', () => {
+		it('renders with text type by default', () => {
+			render(<Input label="Name" />);
+			const input = screen.getByLabelText('Name');
+			expect(input).toHaveAttribute('type', 'text');
+		});
+
+		it('renders with password type', () => {
+			render(<Input label="Password" type="password" />);
+			const input = screen.getByLabelText('Password');
+			expect(input).toHaveAttribute('type', 'password');
+		});
+
+		it('renders with date type', () => {
+			render(<Input label="Date" type="date" slotProps={{ inputLabel: { shrink: true } }} />);
+			const input = screen.getByLabelText('Date');
+			expect(input).toHaveAttribute('type', 'date');
+		});
+
+		it('renders with number type', () => {
+			render(<Input label="Age" type="number" />);
+			const input = screen.getByLabelText('Age');
+			expect(input).toHaveAttribute('type', 'number');
+		});
+	});
+
+	describe('multiline', () => {
+		it('renders a textarea when multiline is true', () => {
+			render(<Input label="Comments" multiline />);
+			const textarea = screen.getByLabelText('Comments');
+			expect(textarea.tagName.toLowerCase()).toBe('textarea');
+		});
+
+		it('renders a single-line input when multiline is false', () => {
+			render(<Input label="Name" />);
+			const input = screen.getByLabelText('Name');
+			expect(input.tagName.toLowerCase()).toBe('input');
+		});
+	});
 });

@@ -22,6 +22,23 @@ const meta = {
 				}
 			}
 		},
+		type: {
+			control: 'select',
+			options: [ 'text', 'password', 'email', 'number', 'tel', 'url', 'search', 'date' ],
+			table: {
+				defaultValue: {
+					summary: 'text'
+				}
+			}
+		},
+		multiline: {
+			control: 'boolean',
+			table: {
+				defaultValue: {
+					summary: 'false'
+				}
+			}
+		},
 		label: {
 			control: 'text',
 		},
@@ -92,6 +109,8 @@ const meta = {
 		error: false,
 		warning: false,
 		required: false,
+		type: 'text',
+		multiline: false,
 	}
 } satisfies Meta<typeof Input>;
 
@@ -110,6 +129,36 @@ export const Variants: Story = {
 			<Input { ...args } variant="filled" label="Filled" />
 			<Input { ...args } variant="standard" label="Standard" />
 		</div>
+	),
+};
+
+export const Types: Story = {
+	argTypes: {
+		type: { table: { disable: true } },
+	},
+	render: ({ ...args }) => (
+		<Stack spacing={2}>
+			<Input { ...args } type="text" label="Text" />
+			<Input { ...args } type="password" label="Password" />
+			<Input { ...args } type="email" label="Email" />
+			<Input { ...args } type="number" label="Number" />
+			<Input { ...args } type="tel" label="Phone" />
+			<Input { ...args } type="url" label="URL" />
+			<Input { ...args } type="search" label="Search" />
+			<Input { ...args } type="date" label="Date" slotProps={{ inputLabel: { shrink: true } }} />
+		</Stack>
+	),
+};
+
+export const Multiline: Story = {
+	argTypes: {
+		multiline: { table: { disable: true } },
+	},
+	render: ({ ...args }) => (
+		<Stack spacing={2}>
+			<Input { ...args } label="Comments" multiline minRows={3} placeholder="Type your comments here..." />
+			<Input { ...args } label="Fixed rows" multiline rows={4} />
+		</Stack>
 	),
 };
 

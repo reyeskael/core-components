@@ -4,7 +4,7 @@ The Input component is a fundamental UI element built on top of Material-UI's Te
 
 ## Overview
 
-Inputs collect text from the user in forms and search fields. They come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states.
+Inputs collect text from the user in forms and search fields. They come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states. Setting `type` renders the underlying native input as `text`, `password`, `email`, `number`, `date`, and so on; setting `multiline` renders a `<textarea>` instead.
 
 [📖 View Input Storybook](?path=/docs/stories-input--docs)
 
@@ -27,6 +27,36 @@ The Input component accepts all standard Material-UI TextField props:
 			<td>`outlined` | `filled` | `standard`</td>
 			<td>`outlined`</td>
 			<td>The style variant</td>
+		</tr>
+		<tr>
+			<td><code>type</code></td>
+			<td>`text` | `password` | `email` | `number` | `tel` | `url` | `search` | `date` | ...</td>
+			<td>`text`</td>
+			<td>The native input type. Any valid HTML <code>&lt;input&gt;</code> type is accepted</td>
+		</tr>
+		<tr>
+			<td><code>multiline</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Renders a <code>&lt;textarea&gt;</code> instead of a single-line input</td>
+		</tr>
+		<tr>
+			<td><code>rows</code></td>
+			<td><code>number</code></td>
+			<td><code>undefined</code></td>
+			<td>Fixed number of rows when <code>multiline</code> is true</td>
+		</tr>
+		<tr>
+			<td><code>minRows</code></td>
+			<td><code>number</code></td>
+			<td><code>undefined</code></td>
+			<td>Minimum number of rows when <code>multiline</code> is true and the height grows with content</td>
+		</tr>
+		<tr>
+			<td><code>maxRows</code></td>
+			<td><code>number</code></td>
+			<td><code>undefined</code></td>
+			<td>Maximum number of rows when <code>multiline</code> is true and the height grows with content</td>
 		</tr>
 		<tr>
 			<td><code>label</code></td>
