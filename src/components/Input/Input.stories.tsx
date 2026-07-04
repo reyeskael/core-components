@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Stack } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 import { fn } from 'storybook/test';
 
@@ -99,6 +101,7 @@ const meta = {
 		},
 		children: { table: { disable: true } },
 		onChange: { table: { disable: true } },
+		endIcon: { table: { disable: true } },
 	},
 	args: {
 		onChange: fn(),
@@ -158,6 +161,15 @@ export const Multiline: Story = {
 		<Stack spacing={2}>
 			<Input { ...args } label="Comments" multiline minRows={3} placeholder="Type your comments here..." />
 			<Input { ...args } label="Fixed rows" multiline rows={4} />
+		</Stack>
+	),
+};
+
+export const WithEndIcon: Story = {
+	render: ({ ...args }) => (
+		<Stack spacing={2}>
+			<Input { ...args } label="Search" endIcon={<SearchIcon />} />
+			<Input { ...args } label="Password" type="password" endIcon={<VisibilityIcon />} />
 		</Stack>
 	),
 };

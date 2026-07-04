@@ -4,7 +4,7 @@ The Input component is a fundamental UI element built on top of Material-UI's Te
 
 ## Overview
 
-Inputs collect text from the user in forms and search fields. They come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states. Setting `type` renders the underlying native input as `text`, `password`, `email`, `number`, `date`, and so on; setting `multiline` renders a `<textarea>` instead.
+Inputs collect text from the user in forms and search fields. They come in three variants — outlined, filled, and standard — and support labels, helper text, error states, and warning states. Setting `type` renders the underlying native input as `text`, `password`, `email`, `number`, `date`, and so on; setting `multiline` renders a `<textarea>` instead. Setting `endIcon` renders an icon at the end of the input, e.g. a search or password-visibility icon.
 
 [📖 View Input Storybook](?path=/docs/stories-input--docs)
 
@@ -87,6 +87,12 @@ The Input component accepts all standard Material-UI TextField props:
 			<td><code>boolean</code></td>
 			<td><code>false</code></td>
 			<td>Whether the input is in a warning state (non-blocking validation) — same visual treatment as <code>error</code>, applied to the border/underline, label, and helper text</td>
+		</tr>
+		<tr>
+			<td><code>endIcon</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Icon rendered at the end of the input, e.g. a search or clear icon</td>
 		</tr>
 		<tr>
 			<td><code>disabled</code></td>
