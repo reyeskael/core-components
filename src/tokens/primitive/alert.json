@@ -1,0 +1,26 @@
+{
+	"alert": {
+		"color": {
+			"success": {
+				"main": { "$type": "color", "$value": "#2e7d32" },
+				"light": { "$type": "color", "$value": "#e8f5e9" }
+			},
+			"info": {
+				"main": { "$type": "color", "$value": "#0288d1" },
+				"light": { "$type": "color", "$value": "#e1f5fe" }
+			},
+			"warning": {
+				"main": { "$type": "color", "$value": "#ed6c02" },
+				"light": { "$type": "color", "$value": "#fff3e0" }
+			},
+			"error": {
+				"main": { "$type": "color", "$value": "#d32f2f" },
+				"light": { "$type": "color", "$value": "#fde8e8" }
+			}
+		},
+		"dimension": {
+			"padding": { "$type": "dimension", "$value": "16px" },
+			"border-radius": { "$type": "dimension", "$value": "4px" }
+		}
+	}
+}

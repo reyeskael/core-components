@@ -8,6 +8,7 @@ import { muiAppBar, muiToolbar } from './components/header';
 import { muiTypography } from './components/typography';
 import { muiOutlinedInput, muiFilledInput, muiInput, muiInputLabel, muiFormHelperText } from './components/input';
 import { muiSelect, muiMenu, muiMenuItem } from './components/dropdown';
+import { muiAlert } from './components/alert';
 
 /**
  * Assembles MUI `ThemeOptions` from a token set.
@@ -41,6 +42,7 @@ export const createThemeFromTokens = (
 		MuiSelect: muiSelect(tokens),
 		MuiMenu: muiMenu(tokens),
 		MuiMenuItem: muiMenuItem(tokens),
+		MuiAlert: muiAlert(tokens),
 	},
 });
 

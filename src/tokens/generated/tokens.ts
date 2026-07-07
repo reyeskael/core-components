@@ -56,6 +56,78 @@ export const tokens = {
 			}
 		}
 	},
+	"alert": {
+		"component": {
+			"root": {
+				"padding": "16px",
+				"borderRadius": "4px"
+			},
+			"variants": {
+				"standard": {
+					"success": {
+						"backgroundColor": "#e8f5e9",
+						"color": "#2e7d32"
+					},
+					"info": {
+						"backgroundColor": "#e1f5fe",
+						"color": "#0288d1"
+					},
+					"warning": {
+						"backgroundColor": "#fff3e0",
+						"color": "#ed6c02"
+					},
+					"error": {
+						"backgroundColor": "#fde8e8",
+						"color": "#d32f2f"
+					}
+				}
+			}
+		},
+		"color": {
+			"success": {
+				"main": "#2e7d32",
+				"light": "#e8f5e9"
+			},
+			"info": {
+				"main": "#0288d1",
+				"light": "#e1f5fe"
+			},
+			"warning": {
+				"main": "#ed6c02",
+				"light": "#fff3e0"
+			},
+			"error": {
+				"main": "#d32f2f",
+				"light": "#fde8e8"
+			}
+		},
+		"dimension": {
+			"padding": "16px",
+			"border-radius": "4px"
+		},
+		"semantic": {
+			"padding": "16px",
+			"radius": "4px",
+			"severity": {
+				"success": {
+					"bg": "#e8f5e9",
+					"text": "#2e7d32"
+				},
+				"info": {
+					"bg": "#e1f5fe",
+					"text": "#0288d1"
+				},
+				"warning": {
+					"bg": "#fff3e0",
+					"text": "#ed6c02"
+				},
+				"error": {
+					"bg": "#fde8e8",
+					"text": "#d32f2f"
+				}
+			}
+		}
+	},
 	"button": {
 		"contained": {
 			"primary": {

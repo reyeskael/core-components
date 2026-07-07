@@ -1,0 +1,30 @@
+{
+	"alert": {
+		"component": {
+			"root": {
+				"padding": { "$type": "dimension", "$value": "{alert.semantic.padding}" },
+				"borderRadius": { "$type": "dimension", "$value": "{alert.semantic.radius}" }
+			},
+			"variants": {
+				"standard": {
+				"success": {
+					"backgroundColor": { "$type": "color", "$value": "{alert.semantic.severity.success.bg}" },
+					"color": { "$type": "color", "$value": "{alert.semantic.severity.success.text}" }
+				},
+				"info": {
+					"backgroundColor": { "$type": "color", "$value": "{alert.semantic.severity.info.bg}" },
+					"color": { "$type": "color", "$value": "{alert.semantic.severity.info.text}" }
+				},
+				"warning": {
+					"backgroundColor": { "$type": "color", "$value": "{alert.semantic.severity.warning.bg}" },
+					"color": { "$type": "color", "$value": "{alert.semantic.severity.warning.text}" }
+				},
+				"error": {
+					"backgroundColor": { "$type": "color", "$value": "{alert.semantic.severity.error.bg}" },
+					"color": { "$type": "color", "$value": "{alert.semantic.severity.error.text}" }
+				}
+				}
+			}
+		}
+	}
+}
