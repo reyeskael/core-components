@@ -8,6 +8,7 @@ import { muiAppBar, muiToolbar } from './components/header';
 import { muiTypography } from './components/typography';
 import { muiOutlinedInput, muiFilledInput, muiInput, muiInputLabel, muiFormHelperText } from './components/input';
 import { muiSelect, muiMenu, muiMenuItem } from './components/dropdown';
+import { muiAlert } from './components/alert';
 import { muiStepper, muiStepLabel, muiStepIcon, muiStepConnector } from './components/stepper';
 
 /**
@@ -42,6 +43,7 @@ export const createThemeFromTokens = (
 		MuiSelect: muiSelect(tokens),
 		MuiMenu: muiMenu(tokens),
 		MuiMenuItem: muiMenuItem(tokens),
+		MuiAlert: muiAlert(tokens),
 		MuiStepper: muiStepper(tokens),
 		MuiStepLabel: muiStepLabel(tokens),
 		MuiStepIcon: muiStepIcon(tokens),

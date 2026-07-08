@@ -1,0 +1,26 @@
+{
+	"alert": {
+		"semantic": {
+			"padding": { "$type": "dimension", "$value": "{alert.dimension.padding}" },
+			"radius": { "$type": "dimension", "$value": "{alert.dimension.border-radius}" },
+			"severity": {
+				"success": {
+					"bg": { "$type": "color", "$value": "{alert.color.success.light}" },
+					"text": { "$type": "color", "$value": "{alert.color.success.main}" }
+				},
+				"info": {
+					"bg": { "$type": "color", "$value": "{alert.color.info.light}" },
+					"text": { "$type": "color", "$value": "{alert.color.info.main}" }
+				},
+				"warning": {
+					"bg": { "$type": "color", "$value": "{alert.color.warning.light}" },
+					"text": { "$type": "color", "$value": "{alert.color.warning.main}" }
+				},
+				"error": {
+					"bg": { "$type": "color", "$value": "{alert.color.error.light}" },
+					"text": { "$type": "color", "$value": "{alert.color.error.main}" }
+				}
+			}
+		}
+	}
+}

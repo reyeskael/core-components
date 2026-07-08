@@ -1,0 +1,122 @@
+## Alert Component
+
+The Alert component displays a short, important message without interrupting the user's task. It is built on top of Material-UI's Alert, offering styled variations for different severities and actions.
+
+## Overview
+
+Alerts provide feedback to the user, typically about the status of their actions or system conditions. They come in several severities (success, info, warning, and error) and standard layout styles.
+
+[📖 View Alert Storybook](?path=/docs/stories-alert--docs)
+
+## Props
+
+The Alert component accepts all standard Material-UI Alert props:
+
+<table>
+	<thead>
+		<tr>
+			<th>Props</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>variant</code></td>
+			<td>`standard` | `filled` | `outlined`</td>
+			<td>`standard`</td>
+			<td>The visual variant style of the alert</td>
+		</tr>
+		<tr>
+			<td><code>severity</code></td>
+			<td>`success` | `info` | `warning` | `error`</td>
+			<td>`success`</td>
+			<td>The severity level of the alert</td>
+		</tr>
+		<tr>
+			<td><code>action</code></td>
+			<td><code>ReactNode</code></td>
+			<td><code>undefined</code></td>
+			<td>Actionable component (e.g. a button) displayed on the side</td>
+		</tr>
+		<tr>
+			<td><code>children</code></td>
+			<td><code>ReactNode</code></td>
+			<td>—</td>
+			<td>The content of the alert, including optional AlertTitle</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/alert/" target="_blank" rel="noopener noreferrer">Material-UI Alert documentation</a>.
+
+## Design tokens
+
+Alert styles are driven by three tiers of tokens: primitive tokens for raw attributes, semantic tokens for component-specific overrides, and component tokens that map to standard variants.
+
+### Root
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>alert.component.root.padding</code></td>
+			<td>Padding applied to the root container</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.root.borderRadius</code></td>
+			<td>Border radius applied to the root container</td>
+		</tr>
+	</tbody>
+</table>
+
+### Standard variant
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>alert.component.variants.standard.success.backgroundColor</code></td>
+			<td>Success background color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.success.color</code></td>
+			<td>Success text/icon color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.info.backgroundColor</code></td>
+			<td>Info background color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.info.color</code></td>
+			<td>Info text/icon color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.warning.backgroundColor</code></td>
+			<td>Warning background color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.warning.color</code></td>
+			<td>Warning text/icon color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.error.backgroundColor</code></td>
+			<td>Error background color for standard alert</td>
+		</tr>
+		<tr>
+			<td><code>alert.component.variants.standard.error.color</code></td>
+			<td>Error text/icon color for standard alert</td>
+		</tr>
+	</tbody>
+</table>
