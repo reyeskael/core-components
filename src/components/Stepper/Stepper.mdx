@@ -1,0 +1,152 @@
+## Stepper Component
+
+The Stepper component displays progress through a sequence of logical and numbered steps. It is built on top of Material-UI's Stepper components, providing a simplified and styled interface.
+
+## Overview
+
+Steppers display progress through a sequence of steps. They are particularly useful for multi-step forms, wizards, or guiding users through a structured process.
+
+[📖 View Stepper Storybook](?path=/docs/stories-stepper--docs)
+
+## Props
+
+The Stepper component accepts the following props:
+
+<table>
+	<thead>
+		<tr>
+			<th>Props</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>steps</code></td>
+			<td><code>string[]</code></td>
+			<td><em>Required</em></td>
+			<td>Array of string labels for each step</td>
+		</tr>
+		<tr>
+			<td><code>activeStep</code></td>
+			<td><code>number</code></td>
+			<td><code>0</code></td>
+			<td>Zero-based index of the currently active step</td>
+		</tr>
+		<tr>
+			<td><code>orientation</code></td>
+			<td><code>'horizontal' | 'vertical'</code></td>
+			<td><code>'horizontal'</code></td>
+			<td>The component orientation</td>
+		</tr>
+		<tr>
+			<td><code>alternativeLabel</code></td>
+			<td><code>boolean</code></td>
+			<td><code>false</code></td>
+			<td>Whether to display the label below the step icon</td>
+		</tr>
+	</tbody>
+</table>
+
+For a complete list of all available props, refer to the <a href="https://mui.com/api/stepper/" target="_blank" rel="noopener noreferrer">Material-UI Stepper documentation</a>.
+
+## Design tokens
+
+Stepper styles are driven by three tiers of tokens. Each part of the stepper (root container, step label, step icon, step connector) has specific design tokens for different interaction states.
+
+### Root Container
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>stepper.root.padding</code></td>
+			<td>The padding applied around the stepper container</td>
+		</tr>
+	</tbody>
+</table>
+
+### Step Icon
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>stepper.icon.size</code></td>
+			<td>The width and height of the step icon</td>
+		</tr>
+		<tr>
+			<td><code>stepper.icon.active</code></td>
+			<td>The background color of the active step icon</td>
+		</tr>
+		<tr>
+			<td><code>stepper.icon.completed</code></td>
+			<td>The background color of the completed step icon</td>
+		</tr>
+		<tr>
+			<td><code>stepper.icon.inactive</code></td>
+			<td>The background color of inactive/disabled step icons</td>
+		</tr>
+	</tbody>
+</table>
+
+### Step Label
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>stepper.label.active</code></td>
+			<td>Text color of the active step label</td>
+		</tr>
+		<tr>
+			<td><code>stepper.label.completed</code></td>
+			<td>Text color of completed step labels</td>
+		</tr>
+			<tr>
+			<td><code>stepper.label.inactive</code></td>
+			<td>Text color of inactive step labels</td>
+		</tr>
+	</tbody>
+</table>
+
+### Step Connector
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>stepper.connector.thickness</code></td>
+			<td>The thickness (border width) of the step connector line</td>
+		</tr>
+		<tr>
+			<td><code>stepper.connector.active</code></td>
+			<td>The color of the connector line when active or completed</td>
+		</tr>
+		<tr>
+			<td><code>stepper.connector.inactive</code></td>
+			<td>The color of the connector line when inactive</td>
+		</tr>
+	</tbody>
+</table>

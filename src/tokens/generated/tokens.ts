@@ -748,6 +748,73 @@ export const tokens = {
 			}
 		}
 	},
+	"stepper": {
+		"root": {
+			"padding": "24px"
+		},
+		"icon": {
+			"size": "24px",
+			"active": "#128C7E",
+			"completed": "#128C7E",
+			"inactive": "#BDBDBD"
+		},
+		"label": {
+			"active": "#000000",
+			"completed": "#333333",
+			"inactive": "#757575"
+		},
+		"connector": {
+			"thickness": "2px",
+			"active": "#128C7E",
+			"inactive": "#E0E0E0"
+		},
+		"color": {
+			"active": {
+				"icon": "#128C7E",
+				"label": "#000000"
+			},
+			"completed": {
+				"icon": "#128C7E",
+				"label": "#333333"
+			},
+			"inactive": {
+				"icon": "#BDBDBD",
+				"label": "#757575"
+			},
+			"connector": {
+				"active": "#128C7E",
+				"inactive": "#E0E0E0"
+			}
+		},
+		"spacing": {
+			"padding": "24px",
+			"connectorThickness": "2px",
+			"iconSize": "24px"
+		},
+		"semantic": {
+			"active": {
+				"icon": "#128C7E",
+				"label": "#000000"
+			},
+			"completed": {
+				"icon": "#128C7E",
+				"label": "#333333"
+			},
+			"inactive": {
+				"icon": "#BDBDBD",
+				"label": "#757575"
+			},
+			"connector": {
+				"active": "#128C7E",
+				"inactive": "#E0E0E0"
+			},
+			"spacing": {
+				"padding": "24px",
+				"connectorThickness": "2px",
+				"iconSize": "24px"
+			}
+		}
+	},
 	"typography": {
 		"h1": {
 			"fontFamily": "\"Roboto\", \"Helvetica\", \"Arial\", sans-serif",

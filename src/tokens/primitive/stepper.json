@@ -1,0 +1,27 @@
+{
+	"stepper": {
+		"color": {
+			"active": {
+				"icon": { "$type": "color", "$value": "#128C7E" },
+				"label": { "$type": "color", "$value": "#000000" }
+			},
+			"completed": {
+				"icon": { "$type": "color", "$value": "#128C7E" },
+				"label": { "$type": "color", "$value": "#333333" }
+			},
+			"inactive": {
+				"icon": { "$type": "color", "$value": "#BDBDBD" },
+				"label": { "$type": "color", "$value": "#757575" }
+			},
+			"connector": {
+				"active": { "$type": "color", "$value": "#128C7E" },
+				"inactive": { "$type": "color", "$value": "#E0E0E0" }
+			}
+		},
+		"spacing": {
+			"padding": { "$type": "dimension", "$value": "24px" },
+			"connectorThickness": { "$type": "dimension", "$value": "2px" },
+			"iconSize": { "$type": "dimension", "$value": "24px" }
+		}
+	}
+}

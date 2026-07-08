@@ -1,0 +1,23 @@
+{
+	"stepper": {
+		"root": {
+			"padding": { "$type": "dimension", "$value": "{stepper.semantic.spacing.padding}" }
+		},
+		"icon": {
+			"size": { "$type": "dimension", "$value": "{stepper.semantic.spacing.iconSize}" },
+			"active": { "$type": "color", "$value": "{stepper.semantic.active.icon}" },
+			"completed": { "$type": "color", "$value": "{stepper.semantic.completed.icon}" },
+			"inactive": { "$type": "color", "$value": "{stepper.semantic.inactive.icon}" }
+		},
+		"label": {
+			"active": { "$type": "color", "$value": "{stepper.semantic.active.label}" },
+			"completed": { "$type": "color", "$value": "{stepper.semantic.completed.label}" },
+			"inactive": { "$type": "color", "$value": "{stepper.semantic.inactive.label}" }
+		},
+		"connector": {
+			"thickness": { "$type": "dimension", "$value": "{stepper.semantic.spacing.connectorThickness}" },
+			"active": { "$type": "color", "$value": "{stepper.semantic.connector.active}" },
+			"inactive": { "$type": "color", "$value": "{stepper.semantic.connector.inactive}" }
+		}
+	}
+}
