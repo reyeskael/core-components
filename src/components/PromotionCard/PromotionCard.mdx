@@ -1,0 +1,114 @@
+## PromotionCard Component
+
+The PromotionCard component is a full-bleed promotional banner card built from MUI primitives. It displays a background image, an overlaid title, and a configurable call-to-action button.
+
+## Overview
+
+Use PromotionCard for homepage banners, featured campaign slots, or any placement where a product or promotion needs visual impact. The title and button are anchored in the top-left of the card, overlaid on the background image — matching the standard e-commerce promotional banner layout.
+
+[📖 View PromotionCard Storybook](?path=/docs/stories-promotioncard--docs)
+
+## Props
+
+<table>
+	<thead>
+		<tr>
+			<th>Prop</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>imageUrl</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>URL of the background image</td>
+		</tr>
+		<tr>
+			<td><code>imageAlt</code></td>
+			<td><code>string</code></td>
+			<td><code>''</code></td>
+			<td>Alt text for the background image</td>
+		</tr>
+		<tr>
+			<td><code>title</code></td>
+			<td><code>string</code></td>
+			<td>—</td>
+			<td>Title text displayed in the top-left of the card</td>
+		</tr>
+		<tr>
+			<td><code>buttonLabel</code></td>
+			<td><code>string</code></td>
+			<td><code>'Shop Now!'</code></td>
+			<td>Label rendered inside the CTA button</td>
+		</tr>
+		<tr>
+			<td><code>onButtonClick</code></td>
+			<td><code>() => void</code></td>
+			<td><code>undefined</code></td>
+			<td>Callback fired when the CTA button is clicked</td>
+		</tr>
+		<tr>
+			<td><code>tokens</code></td>
+			<td><code>Tokens</code></td>
+			<td>generated tokens</td>
+			<td>Token set override — pass a brand-specific token object for multi-brand support</td>
+		</tr>
+	</tbody>
+</table>
+
+## Design tokens
+
+PromotionCard is a composite component with no single MUI counterpart, so its tokens resolve to a plain style object (via <code>promotionCardStyles</code>) consumed through <code>sx</code> props rather than a registered MUI component override.
+
+### Colors
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>promotionCard.component.titleText</code></td>
+			<td>Color of the title text overlaid on the image</td>
+		</tr>
+		<tr>
+			<td><code>promotionCard.component.overlay</code></td>
+			<td>Semi-transparent overlay applied over the background image for legibility</td>
+		</tr>
+	</tbody>
+</table>
+
+### Spacing
+
+<table>
+	<thead>
+		<tr>
+			<th>Token</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><code>promotionCard.component.spacing.borderRadius</code></td>
+			<td>Card corner radius</td>
+		</tr>
+		<tr>
+			<td><code>promotionCard.component.spacing.padding</code></td>
+			<td>Inner padding for the content area (title + button)</td>
+		</tr>
+		<tr>
+			<td><code>promotionCard.component.spacing.titleFontSize</code></td>
+			<td>Font size of the title text</td>
+		</tr>
+		<tr>
+			<td><code>promotionCard.component.spacing.minHeight</code></td>
+			<td>Minimum card height — ensures the card has impact even with a short title</td>
+		</tr>
+	</tbody>
+</table>

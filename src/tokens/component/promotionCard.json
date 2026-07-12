@@ -1,0 +1,14 @@
+{
+	"promotionCard": {
+		"component": {
+			"titleText": { "$type": "color", "$value": "{promotionCard.semantic.titleText}" },
+			"overlay": { "$type": "color", "$value": "{promotionCard.semantic.overlay}" },
+			"spacing": {
+				"borderRadius": { "$type": "dimension", "$value": "{promotionCard.semantic.spacing.borderRadius}" },
+				"padding": { "$type": "dimension", "$value": "{promotionCard.semantic.spacing.padding}" },
+				"titleFontSize": { "$type": "dimension", "$value": "{promotionCard.semantic.spacing.titleFontSize}" },
+				"minHeight": { "$type": "dimension", "$value": "{promotionCard.semantic.spacing.minHeight}" }
+			}
+		}
+	}
+}

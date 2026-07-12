@@ -1,0 +1,14 @@
+{
+	"promotionCard": {
+		"color": {
+			"titleText": { "$type": "color", "$value": "#FFFFFF" },
+			"overlay": { "$type": "color", "$value": "rgba(0, 0, 0, 0.35)" }
+		},
+		"spacing": {
+			"borderRadius": { "$type": "dimension", "$value": "8px" },
+			"padding": { "$type": "dimension", "$value": "16px" },
+			"titleFontSize": { "$type": "dimension", "$value": "20px" },
+			"minHeight": { "$type": "dimension", "$value": "180px" }
+		}
+	}
+}

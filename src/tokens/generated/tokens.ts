@@ -748,6 +748,38 @@ export const tokens = {
 			}
 		}
 	},
+	"promotionCard": {
+		"component": {
+			"titleText": "#FFFFFF",
+			"overlay": "rgba(0, 0, 0, 0.35)",
+			"spacing": {
+				"borderRadius": "8px",
+				"padding": "16px",
+				"titleFontSize": "20px",
+				"minHeight": "180px"
+			}
+		},
+		"color": {
+			"titleText": "#FFFFFF",
+			"overlay": "rgba(0, 0, 0, 0.35)"
+		},
+		"spacing": {
+			"borderRadius": "8px",
+			"padding": "16px",
+			"titleFontSize": "20px",
+			"minHeight": "180px"
+		},
+		"semantic": {
+			"titleText": "#FFFFFF",
+			"overlay": "rgba(0, 0, 0, 0.35)",
+			"spacing": {
+				"borderRadius": "8px",
+				"padding": "16px",
+				"titleFontSize": "20px",
+				"minHeight": "180px"
+			}
+		}
+	},
 	"stepper": {
 		"root": {
 			"padding": "24px"
